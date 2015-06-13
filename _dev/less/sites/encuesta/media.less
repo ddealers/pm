@@ -1,0 +1,66 @@
+ #PMCanal5{
+ 	background: url('http://a9.g.akamai.net/f/9/250733/1m/pmcanal5.download.akamai.com/250733/images/main/pm_bkg_01.jpg') 0px 2% / 100% no-repeat rgb(0, 0, 0) !important;
+
+ 	#EncuestasPM{
+ 		@media (max-width: @screen-us){
+ 			.programs-container{
+				.program{
+					margin:10px 3px;
+					height: 80px !important;
+					width: 85px !important;
+					img{
+						margin-left: -12px;
+						margin-top: -10px;
+					}
+				}
+			}
+			.emoji{
+					margin:5px 3px !important;
+				}
+ 		}
+		@media (max-width: @screen-xs-max){
+			.programs-container{
+				.program{
+					margin:10px 3px;
+					height: 125px !important;
+					width: 100px;
+				}
+			} 
+			.program-image{
+				display: none;
+			}
+			.question{
+				&#titles{
+					display: none;
+					label{
+						display: none;
+					}
+					.emoji{
+						width: 23% !important;
+					}
+				}
+				label{
+					width: 100% !important;
+					height: 40px;
+				}
+				.emoji{
+					margin:5px 10px;
+				}
+			}
+
+			.opinion-textarea{
+				width: 100% !important;
+			}
+		}
+		@media (max-width: @screen-us-max) {}
+		@media (min-width: 768px) and (max-width: 830px) {}
+		@media (min-width: 831px) and (max-width: 906px) {}
+		/*Mini Tablets*/	
+		/*Mini Tablets*/	
+		@media (min-width: @screen-xs-min) and (max-width: @screen-xs-max) {}
+		@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {}
+		@media (min-width: @screen-md-min) and (max-width: @screen-md-max) {}
+		@media (min-width: @screen-lg-min) {}
+ 	}
+}
+	
