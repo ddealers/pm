@@ -1,0 +1,148 @@
+/**
+ * VICTORIA DIGITAL
+ *
+ * Copyright (c) 2015 Victoria Digital
+ *
+ * This file contains VICTORIA DIGITAL Information
+ * Use, disclosure or reproduction is prohibited.
+ *
+ * @author    Victoria Digital
+ +++++++++++++++++++++++++
+ * scaffold.less
+ +++++++++++++++++++++++++
+ */
+
+#PMCanal5{
+  background-color: @background;
+  font-family:@Simple-Bold;
+
+  nav{
+    width: 100%;
+    position: relative;
+    //width: @screen-lg;
+    // margin: 10px auto;
+    background-color: @PMGray;
+
+    //background-color: rgba(123,123,23,.6);
+  }
+
+  #principalHeader{
+    background-color: rgba(0,0,0,.1);
+    width: 100%;
+    height: auto;
+    min-height: 100px;
+    position: relative;
+    z-index: 3001;
+    top: 0;
+    border-bottom: 1px solid @border;
+    #user-nav{
+      width: 100%;
+      height:33px;
+      background-color: #252525;
+      border-bottom: 1px solid #2f2f2f;
+    }
+    #pm-nav{
+      width: 100%;
+      height:67px;
+      background-color: @black;
+      .nav-pm{
+        height: 67px;
+      }
+    }
+  }
+  #master{
+    width: 100%;
+    height: auto;
+    background-color: rgba(12,120,12,.6);
+    overflow: hidden;
+    #container{
+      width: @screen-lg;
+      height: auto;
+      margin: 10px auto;
+      #content{
+        float: left;
+        width: 100%;
+        background-color: rgba(0,0,0,.2);
+        padding: 0 0;
+      }
+    }
+  }
+  .el-break{
+    position: relative;
+    width: @screen-lg;
+    margin: 10px auto;
+    background-color:@cyan;
+  }
+  footer{
+    float: left;
+    width: 100%;
+    //background-color: rgba(12,255,120,.4);
+    background-color: @PMGrayFooter;
+
+    .horarios{
+      position: relative;
+      width: 1200px;
+      margin: 10px auto;
+      background-color:@color-pm;
+
+    }
+
+  }
+  .header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100px;
+  }
+
+  .elbreak{
+    width: 100%;
+    background-color:@cyan;
+  }
+
+  .content{
+    width: 1200px;
+    margin: 10px auto;
+    //background-color: @white;
+    position: relative;
+  }
+
+  .stage{
+    position: relative;
+    .content{
+      width: @content-lg - 40;
+    }
+  }
+
+  .content{
+    width: @content-lg;
+  }
+
+  .section{
+    margin: 15px 0;
+    &.main{
+      margin: 15px auto;
+    }
+  }
+
+  .sidebar{
+    width: 300px;
+    overflow-x: hidden;
+  }
+  
+  .line{
+    margin: 15px 0;
+  }
+  .col-fourth{
+    margin: 10px 3%;
+    width: 19%;
+    height: 25px;
+    display:block;
+    float: left;
+  }
+  .box{
+
+  }
+}
+
+/***************** PM5 end.... **********/

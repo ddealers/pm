@@ -1,0 +1,201 @@
+ #PMCanal5{
+ 	background: url('http://a9.g.akamai.net/f/9/250733/1m/pmcanal5.download.akamai.com/250733/images/main/pm_bkg_01.jpg') 0px 2% / 100% no-repeat rgb(0, 0, 0) !important;
+
+ 	#EncuestasPM{
+ 		#modal-encuesta {
+ 			.modal-dialog{
+ 				margin-top: 100px;
+ 			}
+ 			button{
+ 				background: transparent;
+ 				border: 0;
+ 				position: absolute;
+ 				top:0;
+ 				right: 0;
+ 				float: right;
+ 				text-transform: uppercase;
+ 				text-decoration: underline;
+ 				color: #fff;
+ 			}
+ 			.modal-content{
+ 				background: rgba(0,0,0,0.7);
+ 				border: none;
+ 				color:@color-pm;
+ 				font-size: 16px;
+ 				text-transform: uppercase;
+ 				text-align: center;
+ 				padding: 40px 0;
+ 				position: relative;
+ 			}
+ 		}
+ 		.alpha-bkg{
+ 			padding-top: 40px;
+ 		}
+ 		#encuesta-container{
+	 		background: #000;
+	 		max-width: 960px;
+	 		padding: 50px 0;
+
+	 		h3{
+	 			color:@color-pm;
+	 			text-transform: uppercase;
+	 			width: 100%;
+	 			text-align: center;
+	 			margin-bottom: 28px;
+	 		}
+
+	 		.programs-container, .form-container{
+	 			width: 100%;
+	 			max-width: 752px;
+	 			overflow: hidden;
+	 			background: @containers-background;
+	 			margin: 0 auto;
+	 			padding: 20px;
+	 			margin-bottom: 20px;
+	 			color:@white;
+
+	 			.program{
+	 				height: 132px;
+	 				color:@white;
+	 				line-height: 132px;
+	 				text-align: center;
+	 				overflow: hidden;
+	 				padding: 0;
+	 				position: relative;
+
+	 				.over-selected, .active-program{
+	 					position: absolute;
+	 					width: 100%;
+	 					height: 100%;
+	 					background: rgba(0,255,0,0.5);
+	 					opacity: 0;
+	 				}
+
+	 				&.active-program, &.invalid{
+	 					.over-selected{
+	 						opacity: 1;
+	 						cursor: inherit;
+	 					}
+	 				}
+
+	 				&.invalid{
+	 					.over-selected{
+	 						background: rgba(255,255,255,0.8);
+	 						&:hover{
+	 							cursor: inherit !important;
+	 						}
+	 					}
+	 				}
+
+	 				&:hover{
+	 					.over-selected{
+	 						opacity: 1;
+	 						cursor: pointer;	
+	 					}
+	 				}
+
+	 				img{
+	 					height: 100%;
+	 					width: auto;
+	 				}
+
+	 			}
+	 			.program-image{
+	 				float: right;
+	 				width: 250px;
+	 				height: 280px;
+	 				background: @white;
+	 				margin-top: 60px;
+	 				img{
+	 					width: 100%;
+	 				}
+	 			}
+	 			.question{
+ 					width: 100%;
+ 					height: auto;
+ 					margin: 10px 0;
+ 					max-width: 440px;
+ 					float: left;
+ 					&.full{
+ 						max-width: 100% !important;
+ 					}
+ 					&#titles{
+ 						label{
+ 							width: 196px;
+ 							height: 25px;
+ 						}
+ 						.emoji{
+ 							width: 53px;
+ 							height: 25px;
+ 							background: transparent;
+ 							font-size: 10px;
+ 							&.excelente{
+		 						color: @excelente;
+		 					}
+		 					&.bueno{
+		 						color: @bueno;
+		 					}
+		 					&.regular{
+		 						color: @regular;
+		 					}
+		 					&.malo{
+		 						color: @malo;
+		 					}
+ 						}
+ 					}
+ 				}
+ 				.emoji{
+ 					width: 50px;
+ 					height: 50px;
+ 					background: #ccc;
+ 					display: inline-block;
+ 					text-align: center;
+ 					overflow: hidden;
+ 					img{
+ 						width: 100%;
+ 						height: auto;
+ 					}
+ 					&.excelente{
+ 						background: @excelente;
+ 					}
+ 					&.bueno{
+ 						background: @bueno;
+ 					}
+ 					&.regular{
+ 						background: @regular;
+ 					}
+ 					&.malo{
+ 						background: @malo;
+ 					}
+ 					&:hover, &.active{
+ 						background: @cyan !important;
+ 					}
+ 					&:hover{
+ 						cursor: pointer;
+ 					}
+ 				}
+ 				label{
+ 					width: 200px;
+ 					color: @cyan;
+ 					height: 50px;
+ 					vertical-align: top;
+ 					font-size: 16px;
+ 					line-height: 50px;
+ 				}
+ 				.opinion-textarea{
+ 					width: 503px;
+ 					border: 3px solid #ccc;
+ 					height: 115px;
+ 					color:@black;
+ 					display: inline-block;
+ 				}
+ 				.n-general-button{
+ 					float: right;
+ 					width: 188px;
+ 					font-size: 18px;
+ 				}
+	 		}	
+	 	}
+
+ 	}
+ }

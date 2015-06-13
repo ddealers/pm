@@ -1,0 +1,300 @@
+/**
+ * VICTORIA DIGITAL
+ *
+ * Copyright (c) 2013 Victoria Digital
+ *
+ * This file contains VICTORIA DIGITAL Information
+ * Use, disclosure or reproduction is prohibited.
+ *
+ * @author    Victoria Digital / Benjamín García
+
+ */
+ 
+#PMCanal5{
+	@media (max-width: @screen-us-max){
+		.twiker-banner{
+			width: 100% !important;
+			max-width: 100% !important;
+			height: 110px !important;
+		}
+		.twiker-feed{
+			width: 100% !important;
+			#feed{
+			  .twitter-tweet{
+			  		width: 335px !important;
+			  		.twitter-data{
+			  			width: 230px !important;
+			  		}
+				}
+			}
+		}
+	}
+	@media (max-width: @screen-xs-max){
+		#theultimatefighter{
+			.profile.label{
+				display: none !important;
+			}
+			#tuf-nav{
+				height:auto;
+				.brand{
+					.advertising{
+						display: none;
+					}
+					#tuf-logo{
+						height: 90px;
+						float: none;
+						margin: 0 auto;
+						clear: both;
+					}
+					.tuf-menu{
+						height:auto;
+						li{
+						}
+					}
+				}
+			}
+			.tuf-post{
+				.posts-container{
+					width: 100%;
+					clear: both;
+					float: none;
+				}
+				.post-information{
+					width: 100%;
+					float: none;
+					clear: both;
+					margin:10px auto;
+				}
+			}
+			#modal-profile{
+				.modal-dialog{
+					width: 94%;	
+					min-width: inherit;	
+					.modal-content{
+						overflow: hidden;
+						.modal-body{
+							height: auto;
+							min-height: 800px;
+							.profile-info{
+								float: none;
+								margin-left: 0;
+							}
+							.profile-image{
+								height: 300px;
+								float: none;
+								margin:0 auto;
+							}
+						}
+					}
+				}
+			}
+			.twiker-tuf{
+				.twiker-banner{
+					max-width: 100% !important;
+					img{
+					}
+				}
+				.twiker-feed{
+					#feed{
+		           .twitter-tweet{
+		           		width: 400px;
+							.twitter-avatar{
+								img{
+								}
+							}
+							.twitter-name{
+							}
+							.twitter-user{
+							}
+							.twitter-date{
+							}
+							.twitter-data{
+								width: 295px;
+							}
+							.twitter-content{
+								a{
+								}
+							}
+							.twitter-actions{
+								span{
+								}
+							}
+			          }
+		          }
+				}
+			}
+		}
+		.tuf-comments{
+			width: 100%;
+			max-width: 618px !important;
+		}
+	}
+	@media (min-width: @screen-xs-min) and (max-width: @screen-xs-max) {
+		.twiker-tuf{
+			.twiker-banner{
+				width: 100%;
+			}
+			.twiker-feed{
+				width: 100%;
+				#feed{
+					.twitter-tweet{
+						width: 500px !important;
+					}
+				}
+			}
+		}
+	}
+	@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+		.twiker-tuf{
+			.twiker-banner{
+				max-width: 100% !important;
+				height: 127px;
+			}
+		}
+		#theultimatefighter{
+			.profile.label{
+				display: none !important;
+			}
+			#tuf-nav{
+				height: auto;
+				#tuf-logo{
+					margin: 10px auto !important;
+					float: none !important;
+					clear: both;
+				}
+				.tuf-menu{
+					margin: 0 auto;
+					float: none;
+				}
+				.tuf-post{
+					.posts-container{
+						width: 100% !important;
+						clear: both;
+						float: none;
+					}
+					.post-information{
+						width: 100%;
+						float: none;
+						clear: both;
+						margin:10px auto;
+					}
+				}
+			}
+			#modal-profile{
+				.modal-dialog{
+					width: 94%;	
+					min-width: inherit;	
+					.modal-content{
+						overflow: hidden;
+						.modal-body{
+							height: auto;
+							min-height: 560px;
+							.profile-info{
+								margin-left: 10px;
+							}
+							.profile-image{
+								height: 300px;
+								float: left;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	@media (min-width: 768px) and (max-width: 960px){
+		.twiker-tuf{
+			.twiker-banner{
+			}
+			.twiker-feed{
+				width: 100%;
+				#feed{
+					.twitter-tweet{
+						width: 390px !important;
+						.twitter-data{
+							width: 285px;
+						}
+					}
+				}
+			}
+		}
+		#theultimatefighter{
+			.tuf-post{
+				.posts-container{
+					width: 100% !important;
+					clear: both;
+					float: none;
+				}
+				.post-information{
+					width: 100%;
+					float: none;
+					clear: both;
+					margin:10px auto;
+				}
+			}
+		}
+		.twiker-banner, .twiker-feed{
+			width: 100% !important;
+		}
+		.tuf-comments{
+			width: 100%;
+			max-width: 545px !important;
+		}
+		.sidebar{
+			&.second{
+				float:none;
+				width: 100%;
+			}
+		}
+	}
+	@media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+		.twiker-tuf{
+			.twiker-banner{
+				
+			}
+			.twiker-feed{
+				#feed{
+					.twitter-tweet{
+						width: 343px !important;
+						.twitter-data{
+							width: 232px;
+						}
+					}
+				}
+			}
+		}
+		#theultimatefighter{
+			.tuf-comments{
+				width: 100%;
+				max-width: 545px !important;
+			}
+			.sidebar{
+				&.second{
+					float:none;
+					width: 100%;
+				}
+			}
+			#tuf-nav{
+				height: auto;
+				.brand{
+					.advertising{
+						float: none;
+						margin: 0 auto 10px auto;
+					}
+					.clearfix{
+						display: none;
+					}
+					.tuf-menu{
+						width: 63%;
+						float: right;
+					}
+				}
+			}
+			.tuf-post{
+				.posts-container{
+					width: 260px;
+				}
+			}
+		}
+	}	
+} 

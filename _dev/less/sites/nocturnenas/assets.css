@@ -1,0 +1,35 @@
+[class^='cp-asset-'],
+[class*=' cp-asset-'] {
+  background: url('/images/sites/nocturnenas/main/cp-assests.png') no-repeat;
+  /*background: url('/images/sites/nocturnenas/main/cp-assests.png') no-repeat;*/
+
+}
+.cp-asset-logo {
+  background-position: 0 0;
+}
+/*REPLACE STYLES*/
+#PMCanal5 #theultimatefighter .icon-comments {
+  background: url('/images/sites/nocturnenas/main/cp-assests.png') no-repeat;
+  background-position: -16px -65px;
+}
+#PMCanal5 #theultimatefighter .icon-Twittershare {
+  background: url('/images/sites/nocturnenas/main/cp-assests.png') no-repeat;
+  background-position: -38px -106px;
+}
+#PMCanal5 #theultimatefighter .icon-Twittershare:hover {
+  background-position: -38px -88px;
+}
+#PMCanal5 #theultimatefighter .icon-Facebookshare {
+  background: url('/images/sites/nocturnenas/main/cp-assests.png') no-repeat;
+  background-position: -12px -106px;
+}
+#PMCanal5 #theultimatefighter .icon-Facebookshare:hover {
+  background-position: -12px -87px;
+}
+#PMCanal5 #theultimatefighter .icon-Googleshare {
+  background: url('/images/sites/nocturnenas/main/cp-assests.png') no-repeat;
+  background-position: -73px -106px;
+}
+#PMCanal5 #theultimatefighter .icon-Googleshare:hover {
+  background-position: -73px -88px;
+}

@@ -1,0 +1,176 @@
+<!-- *******************************
+MODALES
+********************************* -->
+<!--********** Modal login ************-->
+<div class="modal fade bs-example-modal-sm" id="modal-login" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" style="z-index: 10000;" >
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <!--LogIn-->
+            <div class="log-in actions-form active">
+                <div class="modal-header">
+                    <div type="button" class="close changemodal" data-dismiss="modal" aria-hidden="true">CERRAR</div>
+                    <h4 class="modal-title" id="modal-title">Inicia sesión en PM</h4>
+                       <div class="btn-container">
+                           <div class="fbIcon">
+                               <div class=" fa fa-facebook fa-2x "></div>
+                           </div>
+                           <button type="button" class="general-button facebook2 " data-dismiss="modal" onclick="">Entrar con Facebook</button>
+                       </div>
+                    <div class="btn-container">
+                            <div class="twIcon">
+                                <div class=" fa fa-twitter fa-2x ">
+                                </div>
+                            </div>
+                        <button type="button" class="general-button twitter2 changemodal" onclick="">Entrar con Twitter</button>
+                    </div>
+
+                </div>
+                <div class="modal-body" id="modal-body">
+                    <table  id="login-table">
+                        <tr>
+                            <td>
+                                <form method="POST" action="#">
+                                    <label >Usuario</label>
+                                    <input type="text" class="secondary-input" name="username" id="username" >
+                                    <label >Contraseña</label>
+                                    <input type="password" class="secondary-input" autocomplete="off" name="pass" id="pass" >
+                                </form>
+                            </td>
+                        </tr>
+                    </table>
+                    <button type="button" class="general-button-login" data-dismiss="modal" onclick="">Continuar</button>
+                    <a class="changemodal forget-pass">¿olvidaste tu contraseña?</a>
+                </div>
+                <div class="modal-footer">
+                    <p>¿No tienes cuenta en PM?</p>
+                    <a class=" registrateAqui changemodal">Regístrate aqui</a>
+                </div>
+            </div>
+            <!--SingUp-->
+            <div class="sing-up actions-form hidden">
+                <div class="modal-body" id="modal-body">
+                    <div type="button" class="close changemodal" data-dismiss="modal" aria-hidden="true">CERRAR</div>
+                    <div class="tit-register">Crea tu cuenta en PM</div>
+                    <table  id="sing-table">
+                        <tr>
+                            <td>
+                                <form method="POST" action="#">
+                                    <label for="register-username">Usuario</label>
+                                    <input type="text" class="secondary-input" name="register-username" id="register-username">
+                                    <label for="register-mail">Correo electrónico</label>
+                                    <input type="email" class="secondary-input" name="register-mail" id="register-mail">
+                                    <label for="register-pass">Contraseña</label>
+                                    <input type="password" class="secondary-input" name="register-pass" id="register-pass" autocomplete="off">
+                                    <label for="register-passr">Repetir contraseña</label>
+                                    <input type="password" class="secondary-input" name="register-passr" id="register-passr" autocomplete="off">
+                                    <button type="button" class="general-button-login" data-dismiss="modal" data-toggle="modal" data-target="#modal-alert"  onclick="registroOk();">Continuar</button>
+                                </form>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="legal-register">Al entrar aceptas ls condiciones, políticas </br>de cookies y de privacidad en PM y pmcanal5.com</div>
+                </div>
+                <div class="modal-footer">
+                    <p>¿Ya tienes una cuenta en PM? <a class="changemodal"><bold>Inicia Seción</bold></a></p>
+                </div>
+            </div>
+            <!--Forgot your password-->
+            <div class="forget-pass actions-form hidden">
+                <div class="modal-body" id="modal-body">
+                    <div type="button" class="close changemodal" data-dismiss="modal" aria-hidden="true">CERRAR</div>
+                    <div class="tit-password">Recupera tu contraseña</div>
+                    <table  id="sing-table">
+                        <tr>
+                            <td>
+                                <form method="POST" action="#">
+                                    <label for="email-forget">Correo electrónico</label>
+                                    <input type="email" class="secondary-input" name="email-forget" id="email-forget">
+                                    <button type="button" class="general-button-login initia changemodal" data-dismiss="modal" onclick="">Enviar</button>
+                                </form>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!--
+                <div class="modal-footer">
+                    <p>¿YA TIENES CUENTA EN PMCANAL5?</p>
+                    <a class="changemodal">ENTRAR</a>
+                </div>
+                -->
+            </div>
+
+            <!--twitter-->
+            <div class="twitter-login actions-form hidden">
+                <div class="modal-body" id="modal-body">
+                    <div type="button" class="close  changemodal" data-dismiss="modal" aria-hidden="true">CERRAR</div>
+                    <div class="tit-password">Registrate con Twitter</div>
+                    <table  id="sing-table">
+                        <tr>
+                            <td>
+                                <form method="POST" action="#">
+                                    <label for="email-twitter">Correo electrónico</label>
+                                    <input type="email" class="secondary-input" name="email-twitter" id="email-twitter">
+                                    <button type="button" class="initia changemodal general-button-login" data-dismiss="modal" >Continuar con Twitter</button>
+                                </form>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="legal-register">Al entrar aceptas ls condiciones, políticas </br>de cookies y de privacidad en PM y pmcanal5.com</div>
+
+                </div>
+            </div>
+            <!--Register-->
+            <div class="register-login actions-form hidden">
+
+                <div class="modal-body" id="modal-body">
+                    <div type="button" class="close changemodal" data-dismiss="modal" aria-hidden="true">CERRAR</div>
+                    <h4 class="tit-password" id="modal-title">Crea tu cuenta en PM</h4>
+                    <div class="btn-container">
+                        <div class="fbIcon">
+                            <div class=" fa fa-facebook fa-2x "></div>
+                        </div>
+                        <button type="button" class=" changemodal initia general-button facebook2 " data-dismiss="modal" onclick="">Entrar con Facebook</button>
+                    </div>
+                    <div class="btn-container">
+                        <div class="twIcon">
+                            <div class=" fa fa-twitter fa-2x ">
+                            </div>
+                        </div>
+                        <button type="button" class="general-button twitter2 changemodal" onclick="">Entrar con Twitter</button>
+                    </div>
+                    <div class="btn-container">
+                        <div class="pmIcon">
+                            <div class="pm-logo-43">
+                            </div>
+                        </div>
+                        <button type="button" class="general-button pm-button changemodal" onclick="">Regístrate con tu correo</button>
+                    </div>
+
+                    <div class="legal-register">Al entrar aceptas ls condiciones, políticas </br>de cookies y de privacidad en PM y pmcanal5.com</div>
+
+                </div>
+                <div class="modal-footer">
+                    <p>¿Ya tienes una cuenta en PM? <a class="initia changemodal"><bold>Inicia Seción</bold></a></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!--*********** END Modal login ***********-->
+<!--*********** MODAL BOX ALERT ***********-->
+<div id="modal-alert" class="modal" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" style="z-index: 10000;" >
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div type="button" class=" close" data-dismiss="modal" aria-hidden="true">CERRAR</div>
+            <div class="modal-header"></div>
+            <div class="modal-body">
+                <div class="alert-header"></div>
+                <div class="alert-body"></div>
+                <div class="alert-button"></div>
+            </div>
+            <div class="modal-footer"></div>
+        </div>
+        </div>
+
+</div>

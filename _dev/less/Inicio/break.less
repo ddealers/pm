@@ -1,0 +1,39 @@
+#break{
+  background: #00ffff;
+  margin: 27px 0;
+  .col-md-9{
+    height: 450px;
+    margin-bottom: 10px;
+  }
+  .col-md-3{
+    .thumbnail-break{
+      width: 300px;
+      height: 187px;
+      border: 1px solid #999999;
+      position: relative;
+      margin: 0;
+      padding: 0;
+      &:nth-child(1){
+        margin-top: 0px;
+      }
+      &:nth-child(2){
+        margin-top: 20px;
+      }
+    }
+    a{
+      display: block;
+      width: 300px;
+      padding: 12px 0;
+      background: @simple-btn;
+      color: white;
+      margin-top: 15px;
+      font-size: 18px;
+      font-weight: 200;
+      &:hover{
+        background: white;
+        color: black;
+        text-decoration: none;
+      }
+    }
+  }
+}
