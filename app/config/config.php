@@ -13,6 +13,8 @@ return new \Phalcon\Config(array(
     ),
     'application' => array(
         'controllersDir' => APP_PATH . '/app/controllers/',
+        'daoDir' => APP_PATH .  '/app/dao/',
+        'voDir' => APP_PATH . '/app/vo/',
         'modelsDir'      => APP_PATH . '/app/models/',
         'migrationsDir'  => APP_PATH . '/app/migrations/',
         'viewsDir'       => APP_PATH . '/app/views/',

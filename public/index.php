@@ -1,5 +1,7 @@
 <?php
 
+use Phalcon\Mvc\Micro;
+
 error_reporting(E_ALL);
 
 define('APP_PATH', realpath('..'));
@@ -24,9 +26,11 @@ try {
     /**
      * Handle the request
      */
-    $application = new \Phalcon\Mvc\Application($di);
+    $app = new Micro($di);
 
-    echo $application->handle()->getContent();
+    $app->get("/api/posts", array($di->get("postController"),"get"));
+
+    $app->handle();
 
 } catch (\Exception $e) {
     echo $e->getMessage();
