@@ -5,9 +5,10 @@
     <script src="js/main.js" type="text/javascript"></script>
     <script type="text/javascript" src="js/submenu.js"></script>
     <script type="text/javascript" src="js/lib/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js"></script>
     <meta charset="UTF-8">
 </head>
-<body id="PMCanal5">
+<body id="PMCanal5" ng-controller="mainController">
 <header id="principalHeader">
 
     <section id="user-nav">
