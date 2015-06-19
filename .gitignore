@@ -27,8 +27,9 @@ npm-debug.log
 # misc
 ###########################
 .sass-cache
-public/assets/js/app/sourcemaps/*
-public/assets/js/app/*.js
 .DS_Store
-public/.DS_Store
-
+/**/.DS_Store
+/.idea
+/**/*.iml
+/**/*.ipr
+/**/*.iws
