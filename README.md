@@ -1,12 +1,5 @@
-Phalcon Tutorial
+PM front
 ================
-
-Phalcon is a web framework for PHP delivered as a C extension providing high
-performance and lower resource consumption.
-
-This is a very simple tutorial to understand the basis of work with Phalcon.
-
-Check out a explanation article: http://docs.phalconphp.com/en/latest/reference/tutorial.html
 
 Get Started
 -----------
@@ -16,6 +9,6 @@ Get Started
 To run this application on your machine, you need at least:
 
 * PHP >= 5.4
-* Apache Web Server with mod rewrite enabled
+* NGINX Web Server
 * Phalcon Framework extension enabled (>= 2.0.0)
-
+* Bower
