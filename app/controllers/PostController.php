@@ -15,7 +15,7 @@ class PostController extends \Phalcon\Mvc\Controller
     /**
      * @var IPostDAO
      */
-    protected  $postDAO;
+    protected $postDAO;
 
     /**
      * @param mixed $postDAO
@@ -28,7 +28,16 @@ class PostController extends \Phalcon\Mvc\Controller
 
     public function get()
     {
-        $postRequest = new PostRequest($this->request->get("typePost"), $this->request->get("postType"));
+        $postRequest = new PostRequest(
+            $this->request->get("typePost"),
+            $this->request->get("postType"),
+            $this->request->get("startDate"),
+            $this->request->get("endDate"),
+            $this->request->get("date"),
+            $this->request->get("order"),
+            $this->request->get("orderDir"),
+            $this->request->get("maxResults")
+        );
 
         $posts = $this->postDAO->findBy($postRequest);
 
