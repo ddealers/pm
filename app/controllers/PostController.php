@@ -34,6 +34,7 @@ class PostController extends \Phalcon\Mvc\Controller
             $this->request->get("startDate"),
             $this->request->get("endDate"),
             $this->request->get("date"),
+            $this->request->get("program"),
             $this->request->get("order"),
             $this->request->get("orderDir"),
             $this->request->get("maxResults")

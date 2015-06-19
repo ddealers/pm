@@ -18,6 +18,8 @@ class PostRequest {
 
     protected $date;
 
+    protected $program;
+
     protected $order;
 
     protected $orderDir;
@@ -26,7 +28,7 @@ class PostRequest {
 
 
 
-    function __construct($typePost, $postType, $startDate, $endDate, $date, $order,
+    function __construct($typePost, $postType, $startDate, $endDate, $date, $program, $order,
                          $orderDir, $maxResults)
     {
         $this->typePost = $typePost;
@@ -34,6 +36,7 @@ class PostRequest {
         $this->startDate = $startDate;
         $this->endDate = $endDate;
         $this->date = $date;
+        $this->program = $program;
         $this->order = $order;
         $this->orderDir = $orderDir;
         $this->maxResults = $maxResults;
@@ -119,6 +122,24 @@ class PostRequest {
     {
         $this->date = $date;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getProgram()
+    {
+        return $this->program;
+    }
+
+    /**
+     * @param mixed $program
+     */
+    public function setProgram($program)
+    {
+        $this->program = $program;
+    }
+
+
 
     /**
      * @return mixed

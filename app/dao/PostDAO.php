@@ -13,10 +13,7 @@ class PostDAO implements IPostDAO
     {
         $query = Post::query();
         $parameters = array();
-        $parameters = $this->applyTypePostFilter($postRequest, $query, $parameters);
-        $parameters = $this->applyPostTypeFilter($postRequest, $query, $parameters);
-        $parameters = $this->applyDateRangeFilter($postRequest, $query, $parameters);
-        $parameters = $this->applyDateFilter($postRequest, $query, $parameters);
+        $parameters = $this->applyFieldFilters($postRequest, $query, $parameters);
         $this->applyOrder($postRequest, $query);
         $this->applyLimit($postRequest, $query);
         $query->bind($parameters);
@@ -148,6 +145,38 @@ class PostDAO implements IPostDAO
         }else{
             $query->limit(5000, 0);
         }
+    }
+
+    /**
+     * @param PostRequest $postRequest
+     * @param $query
+     * @param $parameters
+     * @return mixed
+     */
+    public function applyProgramFilter(PostRequest $postRequest, $query, $parameters)
+    {
+        if ($postRequest->getProgram()) {
+            $query->andWhere("program = :program:");
+            $parameters["program"] = $postRequest->getProgram();
+            return $parameters;
+        }
+        return $parameters;
+    }
+
+    /**
+     * @param PostRequest $postRequest
+     * @param $query
+     * @param $parameters
+     * @return mixed
+     */
+    public function applyFieldFilters(PostRequest $postRequest, $query, $parameters)
+    {
+        $parameters = $this->applyTypePostFilter($postRequest, $query, $parameters);
+        $parameters = $this->applyPostTypeFilter($postRequest, $query, $parameters);
+        $parameters = $this->applyDateRangeFilter($postRequest, $query, $parameters);
+        $parameters = $this->applyDateFilter($postRequest, $query, $parameters);
+        $parameters = $this->applyProgramFilter($postRequest, $query, $parameters);
+        return $parameters;
     }
 
 
