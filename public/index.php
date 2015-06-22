@@ -1,28 +1,17 @@
-<html>
+<html ng-app="PM5">
 <head>
     <link rel="stylesheet" type="text/css" href="css/generals.css"/>
-    <script src="js/lib/jquery-2.1.4.min.js" type="text/javascript"></script>
-    <script src="js/main.js" type="text/javascript"></script>
-    <script type="text/javascript" src="js/submenu.js"></script>
-    <script type="text/javascript" src="js/lib/bootstrap.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js"></script>
     <meta charset="UTF-8">
 </head>
-<body id="PMCanal5" ng-controller="mainController">
+<body id="PMCanal5" ng-controller="mainController as main">
 <header id="principalHeader">
-
-    <section id="user-nav">
-        <?php include_once('../templates/test/navPMUser.php'); ?>
-    </section>
+    <section id="user-nav" ng-include="main.templates.navigation.user_login"></section>
     <nav>
-        <section>
-            <?php include_once('../templates/test/navPM.html'); ?>
-        </section>
+        <section ng-include="main.templates.navigation.main_menu"></section>
     </nav>
 </header>
 <section id="pmDesplegable">
-    <div>banner</div>
+    <div ng-include="templates.sidebar.banner"></div>
 </section>
 <section>
     <div></div>
@@ -80,6 +69,10 @@
     </section>
     <section class="last-footer">footer x</section>
 </footer>
+<script src="js/lib/jquery-2.1.4.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/lib/bootstrap.min.js"></script>
+<script src="js/app.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/submenu.js"></script>
 <script>
     /*
      if (typeof $== 'function'){

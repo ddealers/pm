@@ -1,0 +1,241 @@
+/**
+ * VICTORIA DIGITAL
+ *
+ * Copyright (c) 2015 Victoria Digital
+ *
+ * This file contains VICTORIA DIGITAL Information
+ * Use, disclosure or reproduction is prohibited.
+ *
+ * @author    Victoria Digital
+ +++++++++++++++++++++++++
+ * styles.less
+ +++++++++++++++++++++++++
+ */
+
+#PMCanal5 {
+
+
+    background-color: rgba(0,0,0,.8);
+
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+  }
+  &img{ border: 0;}
+  &.icon20{
+    width: 20px;
+    height:20px;
+  }
+  &.block {
+    overflow: hidden;
+  }
+  .alpha-bkg {
+    background-color: rgba(255, 255, 255, .15);
+  }
+  /*************************
+USER NAV
+*************************/
+  #user-bar {
+    font-family: @Open-Sans;
+    color: #ffffff;
+    float: right;
+    padding-top: 10px;
+    padding-right: 10px;
+    width:auto;
+    .background-userbar{
+      position: absolute;
+      top:0;
+      right: 0;
+      background: @cyan;
+      width: 100%;
+      height: 100%;
+      display: none;
+      z-index: 2000;
+    }
+    .user-options{
+      position: relative;
+      z-index: 3000;
+      span{
+        display: inline-block;
+      }
+      .icon-user{
+        width: 20px;
+        height: 18px;
+        background-size: 20px !important;
+      }
+      .login {
+        font-size: @font12;
+        //letter-spacing: -1px;
+        //word-spacing: -3px;
+        color: @white;
+        padding:0 5px 0 5px;
+        width: auto;
+        cursor: pointer;
+
+        a:hover{
+          color: @cyan;
+        }
+        .exit-btn{
+          letter-spacing: -2px;
+          word-spacing: -2px;
+        }
+      }
+      .login-slash{
+        font-size: @font12;
+      }
+      .register {
+        padding:0 10px;
+      }
+      &:hover{
+        color:@cyan;
+        cursor: pointer;
+      }
+      &.logged {
+        width: auto;
+        text-align:left;
+        text-transform: uppercase;
+        .login{
+          min-width: 110px;
+          padding: 0 0 0 10px;
+          width: auto;
+          &.activeitem{
+            color:@black;
+          }
+        }
+      }
+    }
+    .search {
+      display: none;
+      text-align: right;
+      margin-top:8px;
+      color:@cyan;
+      margin-right: 10px;
+      .search-bar {
+        border: 0;
+        padding: 0 0 5px 5px;
+        width: 100%;
+      }
+    }
+  }
+  /*****************************
+      GENERAL CLASES
+      *****************************/
+  ::-webkit-input-placeholder,
+  :-moz-placeholder,
+  ::-moz-placeholder,
+  :-ms-input-placeholder {
+    text-transform: uppercase;
+  }
+  .publicidad{
+    color: @soft-grey;
+    text-align: center;
+    padding: 5px;
+  }
+  #ban01_televisa{
+    text-align: center;
+    margin: auto;
+    max-width: 955px;
+  }
+  #ban01_televisa{
+    margin: auto;
+  }
+  .hideThis {
+    display: none !important; /*Just for Jquery Actions*/
+  }
+  .opened {
+
+  }
+  .closed {
+    height: 0 !important; /*Just for Jquery Actions*/
+    .transition(0.5s);
+  }
+  .hotarea{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 20;
+    background: transparent;
+  }
+  .general-button {
+    height: 35px;
+    width: 100%;
+    margin: 5px auto;
+    text-transform: uppercase;
+    text-align: center;
+    background: @black;
+    line-height: 35px;
+    color: @cyan;
+    border: 0;
+    display: block;
+    &.text-right {
+      text-align: right;
+      padding-right: 8px;
+    }
+    &:hover {
+      background: @color-pm;
+      color: @black;
+      cursor: pointer;
+    }
+    &.facebook {
+      background: @facebook-color !important;
+      color: @white;
+    }
+    &.facebook::before {
+      width: 20px;
+      height: 20px;
+      background: blue;
+    }
+    &.twitter {
+      background: @twitter-color !important;
+      color: @white;
+    }
+  }
+  .n-general-button {
+    font-family: @Oswald-Light;
+    font-weight: lighter;
+    letter-spacing: .5px;
+    height: 37px;
+    width: 100%;
+    margin: 5px auto;
+    text-transform: uppercase;
+    text-align: center;
+    background: @secondary-blue;
+    line-height: 35px;
+    color: @white;
+    border: 0;
+    display: block;
+    &:hover {
+      background:@over-btn;
+      cursor: pointer;
+    }
+  }
+  .secondary-input{
+    border: 1px solid @black;
+    height: 35px;
+    line-height: 35px;
+    margin: 5px auto;
+    width: 100%;
+    max-width: 250px;
+    background: transparent;
+    border-radius:0;
+    display: block;
+    -webkit-border-radius:0;
+    -moz-border-radius:0;
+    &.min{
+      max-width: 80px;
+    }
+  }
+#promo{
+  float: left;
+  width: @content-lg;
+  background-color: @gray-darker;
+}
+
+  /***************** PM5 end.... **********/
+}
+
+
+

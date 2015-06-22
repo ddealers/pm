@@ -1,6 +1,12 @@
 var app = angular.module('PM5', []);
 app.run().controller('mainController', ['$scope', function($scope) {
-	$scope.templates =
+	this.templates = {
+		navigation: {
+			user_login: './templates/navigation/user_login.html',
+			main_menu: './templates/nagivation/main_menu.html'
+		}
+	}
+	/*
 		[	{ name: 'bitPM.html', url: './templates/bitPM.html'},
 			{ name: 'blogger.html', url: './templates/blogger.html'},
 			{ name: 'blogueroPM.html', url: './templates/blogueroPM.html'},
@@ -14,5 +20,5 @@ app.run().controller('mainController', ['$scope', function($scope) {
 			{ name: 'singleSpecialBitPM.html', url: './templates/singleSpecialBitPM.html'},
 			{ name: 'singleVideo.html', url: './templates/singleVideo.html'}
 		];
-	$scope.templates = $scope.templates[0];
+	*/
 }]);
