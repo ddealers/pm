@@ -28,6 +28,7 @@ class PostRequest {
 
 
 
+
     function __construct($typePost, $postType, $startDate, $endDate, $date, $program, $order,
                          $orderDir, $maxResults)
     {

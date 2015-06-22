@@ -18,7 +18,7 @@ class PostDAO implements IPostDAO
         $this->applyLimit($postRequest, $query);
         $query->bind($parameters);
         $posts = $query->execute();
-        return $posts->toArray();
+        return $posts;
     }
 
     /**
@@ -29,6 +29,7 @@ class PostDAO implements IPostDAO
      */
     public function applyTypePostFilter(PostRequest $postRequest, $query, $parameters)
     {
+        /* @var $query \Phalcon\Mvc\Model\Criteria */
         if ($postRequest->getTypePost()) {
             $query->andWhere("typePost = :typePost:");
             $parameters["typePost"] = $postRequest->getTypePost();
@@ -45,6 +46,7 @@ class PostDAO implements IPostDAO
      */
     public function applyPostTypeFilter(PostRequest $postRequest, $query, $parameters)
     {
+        /* @var $query \Phalcon\Mvc\Model\Criteria */
         if ($postRequest->getPostType()) {
             $query->andWhere("postType = :postType:");
             $parameters["postType"] = $postRequest->getPostType();
@@ -61,6 +63,7 @@ class PostDAO implements IPostDAO
      */
     public function applyDateRangeFilter(PostRequest $postRequest, $query, $parameters)
     {
+        /* @var $query \Phalcon\Mvc\Model\Criteria */
         if ($this->isDateRange($postRequest)) {
             //$query->betweenWhere("date", $postRequest->getStartDate(), $postRequest->getEndDate());
             $query->andWhere("date between :startDate: and :endDate:");
@@ -84,6 +87,7 @@ class PostDAO implements IPostDAO
      */
     public function applyDateFilter(PostRequest $postRequest, $query, $parameters)
     {
+        /* @var $query \Phalcon\Mvc\Model\Criteria */
         if ($postRequest->getDate()) {
             $query->andWhere("date = :date:");
             $parameters["date"] = $postRequest->getDate();
@@ -125,6 +129,7 @@ class PostDAO implements IPostDAO
      */
     public function applyOrder(PostRequest $postRequest, $query)
     {
+        /* @var $query \Phalcon\Mvc\Model\Criteria */
         if ($postRequest->getOrder()) {
             $orderStatement = $postRequest->getOrder();
             if ($postRequest->getOrderDir()) {
@@ -140,6 +145,7 @@ class PostDAO implements IPostDAO
      */
     public function applyLimit(PostRequest $postRequest, $query)
     {
+        /* @var $query \Phalcon\Mvc\Model\Criteria */
         if ($postRequest->getMaxResults() !== null && $postRequest->getMaxResults() <= 5000) {
             $query->limit($postRequest->getMaxResults(), 0);
         }else{
@@ -155,6 +161,7 @@ class PostDAO implements IPostDAO
      */
     public function applyProgramFilter(PostRequest $postRequest, $query, $parameters)
     {
+        /* @var $query \Phalcon\Mvc\Model\Criteria */
         if ($postRequest->getProgram()) {
             $query->andWhere("program = :program:");
             $parameters["program"] = $postRequest->getProgram();
@@ -180,4 +187,11 @@ class PostDAO implements IPostDAO
     }
 
 
+    public function findById($id)
+    {
+       return Post::findFirst(array(
+           "conditions" => "id = ?1",
+           "bind"       => array(1 => $id)
+       ));
+    }
 }

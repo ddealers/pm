@@ -1,10 +1,12 @@
 <?php
 
+
 use Phalcon\Mvc\Micro;
 
 error_reporting(E_ALL);
 
 define('APP_PATH', realpath('..'));
+
 
 try {
 
@@ -19,6 +21,11 @@ try {
     include APP_PATH . "/app/config/loader.php";
 
     /**
+     * Include composer autoloader
+     */
+    require APP_PATH . "/vendor/autoload.php";
+
+    /**
      * Read services
      */
     include APP_PATH . "/app/config/services.php";
@@ -29,6 +36,7 @@ try {
     $app = new Micro($di);
 
     $app->get("/api/posts", array($di->get("postController"),"get"));
+    $app->get("/api/posts/{id}", array($di->get("postController"),"findById"));
 
     $app->handle();
 

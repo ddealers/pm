@@ -10,4 +10,6 @@ interface IPostDAO{
 
     public function findBy(PostRequest $postRequest);
 
+    public function findById($id);
+
 }

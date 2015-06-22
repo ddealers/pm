@@ -6,6 +6,7 @@
  * Time: 04:39 PM
  */
 
+use Hateoas\HateoasBuilder;
 use Phalcon\Http\Response;
 use Phalcon\Logger;
 
@@ -15,8 +16,20 @@ class PostController extends \Phalcon\Mvc\Controller
     /**
      * @var IPostDAO
      */
-    protected $postDAO;
+    private $postDAO;
 
+    /**
+     * @var IPostResultSetTransformerService
+     */
+    private $postResultSetTransformerService;
+
+    /**
+     * @param IPostResultSetTransformerService $postResultSetTransformerService
+     */
+    public function setPostResultSetTransformerService($postResultSetTransformerService)
+    {
+        $this->postResultSetTransformerService = $postResultSetTransformerService;
+    }
     /**
      * @param mixed $postDAO
      *
@@ -42,7 +55,12 @@ class PostController extends \Phalcon\Mvc\Controller
 
         $posts = $this->postDAO->findBy($postRequest);
 
-        return $this->buildResponse($posts);
+        return $this->buildResponse($posts, false);
+    }
+
+    public function findById($id){
+        $post = $this->postDAO->findById($id);
+        return $this->buildResponse(array($post), true);
     }
 
     /**
@@ -58,14 +76,32 @@ class PostController extends \Phalcon\Mvc\Controller
      * @param $posts
      * @return Response
      */
-    public function buildResponse($posts)
+    public function buildResponse($posts, $allowSingle)
     {
         $response = new Response();
         if ($this->postsNotFound($posts)) {
             $response->setStatusCode(404);
         } else {
-            $response->setJsonContent($posts);
+            $hateoas = HateoasBuilder::create()->build();
+            $postVos = $this->postResultSetTransformerService->transform($posts);
+            $postVos = $this->convertToSingleRecordIfNecessary($allowSingle, $postVos);
+            $jsonResult = $hateoas->serialize($postVos, 'json');
+            $response->setContent($jsonResult);
         }
         return $response;
+    }
+
+    /**
+     * @param $allowSingle
+     * @param $postVos
+     * @return mixed
+     */
+    public function convertToSingleRecordIfNecessary($allowSingle, $postVos)
+    {
+        if ($allowSingle && sizeof($postVos) == 1) {
+            $postVos = $postVos[0];
+            return $postVos;
+        }
+        return $postVos;
     }
 }

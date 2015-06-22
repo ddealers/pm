@@ -26,9 +26,15 @@ $di->set("postDAO", function(){
     return $postDAO;
 });
 
+$di->set("postResultSetResultSetTransformerService", function(){
+    $postTransformerService = new PostResultSetTransformerService();
+    return $postTransformerService;
+});
+
 $di->set("postController", function() use($di){
     $postController = new PostController();
     $postController->setPostDAO($di->get("postDAO"));
+    $postController->setPostResultSetTransformerService($di->get("postResultSetResultSetTransformerService"));
     return $postController;
 });
 

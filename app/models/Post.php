@@ -5,183 +5,183 @@ class Post extends \Phalcon\Mvc\Model
 
     /**
      *
-     * @public integer
+     * @private string
      */
-    public $name;
-
-    /**
-     *
-     * @public string
-     */
-    public $id;
-
-    /**
-     *
-     * @public string
-     */
-    public $title;
-
-    /**
-     *
-     * @public string
-     */
-    public $content;
-
-    /**
-     *
-     * @public string
-     */
-    public $author;
-
-    /**
-     *
-     * @public string
-     */
-    public $postType;
-
-    /**
-     *
-     * @public string
-     */
-    public $date;
-
-    /**
-     *
-     * @public double
-     */
-    public $avg;
+    private $id;
 
     /**
      *
      * @public integer
      */
-    public $visits;
+    private $name;
+
+    /**
+     *
+     * @private string
+     */
+    private $title;
+
+    /**
+     *
+     * @private string
+     */
+    private $content;
+
+    /**
+     *
+     * @private string
+     */
+    private $author;
+
+    /**
+     *
+     * @private string
+     */
+    private $postType;
+
+    /**
+     *
+     * @private string
+     */
+    private $date;
+
+    /**
+     *
+     * @private double
+     */
+    private $avg;
+
+    /**
+     *
+     * @private integer
+     */
+    private $visits;
+
+    /**
+     *
+     * @private string
+     */
+    private $tags;
+
+    /**
+     *
+     * @private integer
+     */
+    private $comments;
+
+    /**
+     *
+     * @private string
+     */
+    private $thumbnailId;
+
+    /**
+     *
+     * @private string
+     */
+    private $thumbnail;
+
+    /**
+     *
+     * @private string
+     */
+    private $url;
+
+    /**
+     *
+     * @private string
+     */
+    private $program;
+
+    /**
+     *
+     * @private string
+     */
+    private $stage;
+
+    /**
+     *
+     * @private string
+     */
+    private $embed;
+
+    /**
+     *
+     * @private string
+     */
+    private $dest;
+
+    /**
+     *
+     * @private string
+     */
+    private $hour;
+
+    /**
+     *
+     * @private string
+     */
+    private $promo;
+
+    /**
+     *
+     * @private string
+     */
+    private $twWidgetId;
+
+    /**
+     *
+     * @private string
+     */
+    private $twitter;
+
+    /**
+     *
+     * @private string
+     */
+    private $typePost;
+
+    /**
+     *
+     * @private string
+     */
+    private $spotifyUrl;
+
+    /**
+     *
+     * @private string
+     */
+    private $stageList;
+
+    /**
+     *
+     * @private string
+     */
+    private $notinhome;
+
+    /**
+     *
+     * @private string
+     */
+    private $metaFb;
+
+    /**
+     *
+     * @private string
+     */
+    private $metaVars;
+
+    /**
+     *
+     * @private string
+     */
+    private $metaCss;
 
     /**
      *
      * @public string
      */
-    public $tags;
-
-    /**
-     *
-     * @public integer
-     */
-    public $comments;
-
-    /**
-     *
-     * @public string
-     */
-    public $thumbnailId;
-
-    /**
-     *
-     * @public string
-     */
-    public $thumbnail;
-
-    /**
-     *
-     * @public string
-     */
-    public $url;
-
-    /**
-     *
-     * @public string
-     */
-    public $program;
-
-    /**
-     *
-     * @public string
-     */
-    public $stage;
-
-    /**
-     *
-     * @public string
-     */
-    public $embed;
-
-    /**
-     *
-     * @public string
-     */
-    public $dest;
-
-    /**
-     *
-     * @public string
-     */
-    public $hour;
-
-    /**
-     *
-     * @public string
-     */
-    public $promo;
-
-    /**
-     *
-     * @public string
-     */
-    public $twWidgetId;
-
-    /**
-     *
-     * @public string
-     */
-    public $twitter;
-
-    /**
-     *
-     * @public string
-     */
-    public $typePost;
-
-    /**
-     *
-     * @public string
-     */
-    public $spotifyUrl;
-
-    /**
-     *
-     * @public string
-     */
-    public $stageList;
-
-    /**
-     *
-     * @public string
-     */
-    public $notinhome;
-
-    /**
-     *
-     * @public string
-     */
-    public $metaFb;
-
-    /**
-     *
-     * @public string
-     */
-    public $metaVars;
-
-    /**
-     *
-     * @public string
-     */
-    public $metaCss;
-
-    /**
-     *
-     * @public string
-     */
-    public $keywords;
+    private $keywords;
 
     /**
      * Method to set the value of field name
@@ -251,12 +251,12 @@ class Post extends \Phalcon\Mvc\Model
     /**
      * Method to set the value of field post_type
      *
-     * @param string $post_type
+     * @param string $postType
      * @return $this
      */
-    public function setPostType($post_type)
+    public function setPostType($postType)
     {
-        $this->post_type = $post_type;
+        $this->$postType = $postType;
 
         return $this;
     }
@@ -630,7 +630,7 @@ class Post extends \Phalcon\Mvc\Model
      */
     public function getPostType()
     {
-        return $this->post_type;
+        return $this->$postType;
     }
 
     /**
@@ -780,7 +780,7 @@ class Post extends \Phalcon\Mvc\Model
      */
     public function getTwWidgetId()
     {
-        return $this->tw-widget-id;
+        return $this->twWidgetId;
     }
 
     /**
