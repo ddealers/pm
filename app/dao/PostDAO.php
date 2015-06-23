@@ -1,4 +1,9 @@
 <?php
+namespace Pm\DAO;
+
+use Pm\Model\Post;
+use Pm\Vo\PostRequest;
+
 
 /**
  * Created by PhpStorm.
@@ -66,14 +71,14 @@ class PostDAO implements IPostDAO
         /* @var $query \Phalcon\Mvc\Model\Criteria */
         if ($this->isDateRange($postRequest)) {
             //$query->betweenWhere("date", $postRequest->getStartDate(), $postRequest->getEndDate());
-            $query->andWhere("date between :startDate: and :endDate:");
+            $query->andWhere("DATE(date) between :startDate: and :endDate:");
             $parameters["startDate"] = $postRequest->getStartDate();
             $parameters["endDate"] = $postRequest->getEndDate();
         } else if ($this->isOpenEndRange($postRequest)) {
-            $query->andWhere("date >= :startDate:");
+            $query->andWhere("DATE(date) >= :startDate:");
             $parameters["startDate"] = $postRequest->getStartDate();
         } else if ($this->isCloseEndRange($postRequest)) {
-            $query->andWhere("date <= :endDate:");
+            $query->andWhere("DATE(date) <= :endDate:");
             $parameters["endDate"] = $postRequest->getEndDate();
         }
         return $parameters;
@@ -89,7 +94,7 @@ class PostDAO implements IPostDAO
     {
         /* @var $query \Phalcon\Mvc\Model\Criteria */
         if ($postRequest->getDate()) {
-            $query->andWhere("date = :date:");
+            $query->andWhere("DATE(date) = :date:");
             $parameters["date"] = $postRequest->getDate();
             return $parameters;
         }

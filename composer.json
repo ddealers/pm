@@ -9,10 +9,15 @@
       "email": "email@example.com"
     }
   ],
-  "require": {
+  "require": {  
     "willdurand/hateoas": "@stable"
   },
   "require-dev": {
 
+  },
+  "autoload": {
+    "psr-0": {
+      "": "../src"
+    }
   }
 }

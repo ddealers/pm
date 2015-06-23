@@ -1,4 +1,5 @@
 <?php
+namespace Pm\Controller;
 /**
  * Created by PhpStorm.
  * User: ACISS
@@ -9,8 +10,12 @@
 use Hateoas\HateoasBuilder;
 use Phalcon\Http\Response;
 use Phalcon\Logger;
+use Phalcon\Mvc\Controller;
+use Pm\DAO\IPostDAO;
+use Pm\Services\IPostResultSetTransformerService;
+use Pm\Vo\PostRequest;
 
-class PostController extends \Phalcon\Mvc\Controller
+class PostController extends Controller
 {
 
     /**
@@ -24,17 +29,18 @@ class PostController extends \Phalcon\Mvc\Controller
     private $postResultSetTransformerService;
 
     /**
-     * @param IPostResultSetTransformerService $postResultSetTransformerService
+     * @param  $postResultSetTransformerService
      */
-    public function setPostResultSetTransformerService($postResultSetTransformerService)
+    public function setPostResultSetTransformerService(
+        IPostResultSetTransformerService $postResultSetTransformerService)
     {
         $this->postResultSetTransformerService = $postResultSetTransformerService;
     }
     /**
-     * @param mixed $postDAO
+     * @param $postDAO
      *
      */
-    public function setPostDAO($postDAO)
+    public function setPostDAO(IPostDAO $postDAO)
     {
         $this->postDAO = $postDAO;
     }
@@ -60,26 +66,34 @@ class PostController extends \Phalcon\Mvc\Controller
 
     public function findById($id){
         $post = $this->postDAO->findById($id);
-        return $this->buildResponse(array($post), true);
+        $posts = array();
+        if($post){
+            $posts[] = $post;
+        }
+        return $this->buildResponse($posts, true);
     }
 
     /**
      * @param $posts
      * @return bool
      */
-    public function postsNotFound($posts)
+    private function postsNotFound($posts)
     {
         return sizeof($posts) == 0;
     }
 
     /**
      * @param $posts
+     * @param $allowSingle
      * @return Response
      */
-    public function buildResponse($posts, $allowSingle)
+    private function buildResponse($posts, $allowSingle)
     {
         $response = new Response();
         if ($this->postsNotFound($posts)) {
+            if(is_array($posts)){
+                $response->setJsonContent($posts);
+            }
             $response->setStatusCode(404);
         } else {
             $hateoas = HateoasBuilder::create()->build();
@@ -96,7 +110,7 @@ class PostController extends \Phalcon\Mvc\Controller
      * @param $postVos
      * @return mixed
      */
-    public function convertToSingleRecordIfNecessary($allowSingle, $postVos)
+    private function convertToSingleRecordIfNecessary($allowSingle, $postVos)
     {
         if ($allowSingle && sizeof($postVos) == 1) {
             $postVos = $postVos[0];

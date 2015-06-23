@@ -1,4 +1,8 @@
 <?php
+namespace Pm\DAO;
+
+use Pm\Vo\PostRequest;
+
 /**
  * Created by PhpStorm.
  * User: ACISS

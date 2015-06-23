@@ -1,4 +1,7 @@
 <?php
+namespace Pm\Services;
+
+use Pm\Vo\Post;
 
 /**
  * Created by PhpStorm.
@@ -13,8 +16,8 @@ class PostResultSetTransformerService implements IPostResultSetTransformerServic
     {
         $result = array();
         foreach ($posts as $post) {
-            /* @var $post Post */
-            $postVo = new PostVo();
+            /* @var $post \Pm\Model\Post */
+            $postVo = new Post();
             $postVo->setId($post->getId());
             $postVo->setAuthor($post->getAuthor());
             $postVo->setAvg($post->getAvg());

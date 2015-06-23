@@ -5,6 +5,7 @@
  * Date: 22/06/2015
  * Time: 12:26 AM
  */
+namespace Pm\Vo;
 
 use JMS\Serializer\Annotation as Serializer;
 use Hateoas\Configuration\Annotation as Hateoas;
@@ -14,7 +15,7 @@ use Hateoas\Configuration\Annotation as Hateoas;
  *
  * @Hateoas\Relation("self", href = "expr('/api/posts/' ~ object.getId())")
  */
-class PostVo {
+class Post {
 
     /**
      *

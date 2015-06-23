@@ -1,5 +1,5 @@
 <?php
-
+namespace Pm\Services;
 /**
  * Created by PhpStorm.
  * User: ACISS

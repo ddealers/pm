@@ -13,7 +13,7 @@ return new \Phalcon\Config(array(
     ),
     'application' => array(
         'controllersDir' => APP_PATH . '/app/controllers/',
-        'serviceDir' => APP_PATH .  '/app/service/',
+        'serviceDir' => APP_PATH .  '/app/services/',
         'daoDir' => APP_PATH .  '/app/dao/',
         'voDir' => APP_PATH . '/app/vo/',
         'vendorDir' => APP_PATH . '/vendor/',

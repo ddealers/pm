@@ -5,6 +5,7 @@
  * Date: 17/06/2015
  * Time: 09:32 PM
  */
+namespace Pm\Vo;
 
 class PostRequest {
 
@@ -25,8 +26,6 @@ class PostRequest {
     protected $orderDir;
 
     protected $maxResults;
-
-
 
 
     function __construct($typePost, $postType, $startDate, $endDate, $date, $program, $order,

@@ -37,6 +37,8 @@ try {
 
     $app->get("/api/posts", array($di->get("postController"),"get"));
     $app->get("/api/posts/{id}", array($di->get("postController"),"findById"));
+    $app->post("/api/users", array($di->get("userController"),"register"));
+    $app->post("/api/auth", array($di->get("authenticationController"),"login"));
 
     $app->handle();
 
