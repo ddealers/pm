@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html ng-app="PM5">
 	<head>
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title></title>
+		<meta charset="utf-8">
+	    <meta http-equiv="x-ua-compatible" content="ie=edge">
+	    <title>PM Canal 5* - {{ title }}</title>
+	    <meta name="description" content="PM Canal 5">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
 	    <!-- inject:css -->
-	    <link rel="stylesheet" href="css/vendor.min.css">
-	    <link rel="stylesheet" href="css/generals.css">
+	    <link rel="stylesheet" href="/css/vendor.min.css">
+	    <link rel="stylesheet" href="/css/generals.min.css">
 	    <!-- endinject -->
 	</head>
 	<body id="PMCanal5" ng-controller="MainController as main">
 		<header id="principalHeader">
-			<section id="user-nav" ng-include="main.templates.navigation.user_login"></section>
-			<nav ng-include="main.templates.navigation.main_menu"></nav>
+			<div id="user-bar" ng-controller="LoginBarController as login" ng-include="main.templates.insiders.login_bar"></div>
+			<nav class="navbar-collapse collapse nopadding" ng-include="main.templates.navigation.main_menu"></nav>
+			<div class="breadcrumb"></div>
+			<div id="promoPM" ng-include="main.templates.sections.promo"></div>
 		</header>
 		<section id="pmDesplegable">
 			<div ng-include="main.templates.sidebar.banner"></div>
@@ -25,16 +29,14 @@
 		    	<section id="content">
 		            <ng-view></ng-view>
 		        </section>
+		        <div ng-include="main.templates.components.promo_slider"></div>
+			    <div id="twitterBox" ng-include="main.templates.components.twitter_box"></div>
+			    {% include 'test/modalesGeneral.html' %}
 		    </div>
 		</section>
 		<!-- inject:js -->
-		<script src="js/jquery.js"></script>
-		<script src="js/bootstrap.js"></script>
-		<script src="js/moment.js"></script>
-		<script src="js/angular.js"></script>
-		<script src="js/angular-animate.js"></script>
-		<script src="js/angular-route.js"></script>
-		<script src="js/app.js"></script>
+		<script src="/js/vendor.min.js"></script>
+		<script src="/js/app.min.js"></script>
 		<!-- endinject -->
 	</body>
 </html>
