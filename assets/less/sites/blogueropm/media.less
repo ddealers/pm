@@ -1,0 +1,273 @@
+/**
+ * VICTORIA DIGITAL
+ *
+ * Copyright (c) 2013 Victoria Digital
+ *
+ * This file contains VICTORIA DIGITAL Information
+ * Use, disclosure or reproduction is prohibited.
+ *
+ * @author    Victoria Digital / Benjamín García
+
+ */
+ 
+#PMCanal5{
+   #blogueroPM{
+      @media (max-width: @screen-us-max){
+         .content-share{
+            padding: 10px 10px 50px 20px !important;
+         }
+         .stage{
+            &.container{
+
+               padding: 0px;
+            }
+         }
+         #bloguero-header{
+            .post-title{
+               padding-top: 30px;
+               font-size: 20px;
+               padding-bottom: 30px;
+            }
+         }
+          #generic-page{
+            #section-content{         
+               padding: 5px;
+
+               .content-text{
+                  p{
+
+                     &.video{
+                        width: 285px;
+                        height: 180px;
+                     }
+                     &.img{
+                        display: block;
+                        margin: 10px 0;
+
+                        img{
+                           width: 100%;
+                        }
+
+                        &.pull-left{
+                           width: 100%;
+                           margin: 10px 0;
+                        }
+
+                        &.pull-right{
+                           width: 100%;
+                           margin: 10px 0;
+                        }
+
+                        pre{
+                           font-size: 12px;
+                           .border-radiuses(0px, 8px, 8px, 0px);
+                        }
+                     }
+                  }
+               }
+
+               .container{
+                  padding: 0;
+               }
+
+            }
+         }
+         .top-post{
+            .top-post-data{
+               float:right;
+               width: 100%;
+            }
+            .blg-more-post{
+               float: left;
+               width: 100%;
+            }  
+         }
+      }
+
+      @media (min-width: @screen-xs-min) and (max-width: @screen-xs-max){     
+         #generic-page{
+            #section-content{
+               padding: 10px;
+               .content-text{
+                  p{
+
+                     &.video{
+                        margin: auto;
+                        width: 430px;
+                        height: 250px;
+                     }
+                  }
+               }
+            }
+         }      
+      }
+      
+      @media (max-width: @screen-xs-max){
+         .pull-right{
+            display: blocK;
+         }
+         .content{
+            width: 100%;
+         }
+          .stage{
+            margin: 0 auto;
+         }
+         &.stage-home{
+            #bloguero-header{
+               height:180px;
+               .authors-menu{
+                  height: auto;
+                  ul{
+                     width:100%;
+                     height: auto;
+                     li{
+                        margin: 0 10px;
+                     }
+                  }
+               }
+            }
+         }
+         .top-post{
+            .top-post-data{
+               float:right;
+               width: 100%;
+            }
+            .blg-more-post{
+               float: left;
+               width: 100%;
+            }  
+         }
+         #bloguero-header{
+            //height: auto;
+            padding-bottom: 20px;
+            .section-title{
+               display: none;
+            }
+            .post-title{
+               padding-top: 30px;
+               padding-bottom: 30px;
+
+            }
+            .section-data{
+               background: rgba(0,0,0,0.4);
+               line-height: auto;
+            }
+         }
+         #generic-page{
+            #section-content{
+               padding: 10px;
+               .content-text{
+
+               }
+               .content-title{
+                  font-size: 23px;
+               }
+               .medium-image, .full-image{
+                  width: 100%;
+                  margin: 10px auto;
+               }
+            }
+             .content-more{
+               .control{
+                  width: 42%;
+               }
+             }
+         }
+         .single-comments{
+            .comments{
+               padding: 20px;
+            }
+         }
+         .dates-blogger{
+                  float: right !important;
+                  padding-bottom:3px;
+               }
+      }
+      @media (min-width: 768px){
+       .container{
+         width: 100%;
+       }
+      }
+      @media (min-width: 768px) and (max-width: 830px) {
+         .content-share{
+            padding: 10px 10px 50px 20px !important;
+         }
+      }
+
+      @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+         .top-post{
+            .top-post-data{
+               float:right;
+               width: 100%;
+            }
+            .blg-more-post{
+               float: left;
+               width: 100%;
+            }  
+         }
+         #generic-page{
+             .content{
+               width: 423px;
+            }
+            .stage{
+               margin: 0 auto;
+            }
+            #section-content{
+               .content-text{
+                  p{
+
+                     &.video{
+                        height: 210px;
+                     }
+                  }
+               }
+               .content-title{
+                  font-size: 32px;
+               }
+               .medium-image, .full-image{
+                  width: 100%;
+                  margin: 10px auto;
+               }
+            }
+             .content-more{
+               .control{
+                  width: 42%;
+               }
+             }
+         }
+      }
+      @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+         #generic-page{
+            .stage{
+               margin: 0 auto;
+            }
+             .content{
+               width: 615px;
+            }
+            #section-content{
+               .content-text{
+                  p{
+
+                     &.video{
+                        height: 320px;
+                     }
+                  }
+               }
+               .content-title{
+                  font-size: 32px;
+               }
+               .medium-image, .full-image{
+                  width: 100%;
+                  margin: 10px auto;
+               }
+            }
+             .content-more{
+               .control{
+                  width: 42%;
+               }
+             }
+         }
+      }
+      @media (min-width: @screen-lg-min) {} 
+   } 
+} 

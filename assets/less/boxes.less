@@ -1,0 +1,523 @@
+/**
+ * VICTORIA DIGITAL
+ *
+ * Copyright (c) 2015 Victoria Digital
+ *
+ * This file contains VICTORIA DIGITAL Information
+ * Use, disclosure or reproduction is prohibited.
+ *
+  * @author    Victoria Digital
+ +++++++++++++++++++++++++
+ * boxes.less
+ +++++++++++++++++++++++++
+ */
+
+#PMCanal5 {
+  .header-container-content{
+    display: block;
+    height: 58px;
+    width: 100%;
+   background-color: rgba(0,0,0,.3);
+  }
+  .body-container-content{
+    position: relative;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+  }
+  .date-container-content{
+
+    float: left;
+    padding-top: 10px;
+    background-color: rgba(0,0,0,.1);
+    width: 86px;
+    height: 556px;
+    text-align: center;
+  }
+  #row2{
+    background-color: rgba(255,0,120,.2);
+    display: inline-block;
+    width: 804px;
+  }
+  #row3{
+    background-color: rgba(255,0,120,.2);
+    display: inline-block;
+    width: 804px;
+  }
+
+  /********************
+    generic box
+ ********************/
+  .box {
+    display: inline-block;
+    border: 1px solid rgba(255, 255, 255, 1);
+    margin: 4px 4px;
+    overflow: hidden;
+    background: url("") no-repeat;
+    background-size: cover;
+    width: 247px;
+    height: 242px;
+    &:hover {
+      cursor: pointer;
+     border: 1px solid @cyan;
+      header {
+        top: 0;
+        visibility: visible;
+        opacity: 1;
+        transition: visibility 0s linear 0.5s, opacity 0.5s linear;
+      }
+      footer {
+        bottom: 0;
+        visibility: 0;
+        opacity: 0;
+        transition: 1s;
+      }
+    }
+    .box-icon {
+      display:block;
+      position: relative;
+    }
+    .box-icon-2 {
+      display: none;
+      position: relative;
+    }
+    .box-icon-favorite {
+
+      display: none;
+      position: relative;
+    }
+    & header {
+      visibility: 0;
+      opacity: 0;
+      position: relative;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, .7);
+      & h1 {
+        position: absolute;
+        margin-left: 15px;
+      }
+      & h2 {
+        position: relative;
+        margin-left: 15px;
+        color: @color-pm;
+      }
+    }
+    & footer {
+      position: relative;
+      background-color: rgba(0, 0, 0, .5);
+      padding: 7px 7px 0 7px;
+      & h1 {
+        position: relative;
+        width: 100%;
+      }
+      & h2 {
+        display: none;
+        position: relative;
+        width: 80%;
+      }
+      & img {
+        display: none;
+        position: absolute;
+        margin: 4px;
+        top: 25px;
+        left: 5px;
+        width: 37px;
+        height: 37px;
+      }
+      & nav {
+        position: absolute;
+        margin: 0;
+        width: 100%;
+        .views-box{
+
+        }
+        .comments-box{
+
+        }
+        .likes-box{
+
+        }
+      }
+      & ul {
+        padding: 0;
+        margin: 0;
+      }
+      & li {
+        font-family: @Open-Sans;
+        font-size: @font14;
+        display: inline-block;
+        color: @cyan;
+        width: 20px;
+        height: 20px;
+        margin-right: 40px;
+        & p {
+          padding-left: 22px;
+        }
+
+      }
+
+    }
+  }
+  /**********END
+
+/********************
+GMS-Big
+********************/
+.GMS-Big{
+
+    width: 384px;
+    height: 270px;
+
+
+  .box-icon {
+    display: block;
+    bottom: 359px;
+    left: 5px;
+  }
+  .box-icon-2 {
+    bottom: 347px;
+    left: 350px;
+  }
+  .box-icon-favorite {
+    bottom: 128px;
+    left: 319px;
+  }
+  & header {
+    & h1 {
+      bottom: 98px;
+      width: 338px;
+    }
+    & h2 {
+      top: 167px;
+    }
+    &span{
+      display: block;
+    }
+  }
+  & footer {
+    height: 100px;
+    position: relative;
+    bottom: 46px;
+    background-color: rgba(0, 0, 0, .5);
+    padding: 7px 7px 0 7px;
+
+    & h1 {
+      display: block;
+    }
+    & h2 {
+      display: block;
+      left: 47px;
+      top: 8px;
+      width: 80%;
+      margin-bottom: 4px;
+    }
+    & img {
+      display: none;
+      //background: url("../images/main/captura-promo.png") no-repeat;
+      background-size: cover;
+    }
+    & nav {
+      left: 7px;
+      top: 75px;
+    }
+    & ul {
+      padding: 0;
+      margin: 0;
+    }
+    & li {
+      font-family: @Simple-Regular;
+      font-size: @font14;
+
+      display: inline-block;
+      color: @cyan;
+      width: 20px;
+      height: 20px;
+      margin-right: 40px;
+      & p {
+        padding-left: 22px;
+      }
+
+    }
+
+  }
+}
+/********************
+  generic box Small
+********************/
+  .GMS-Small {
+    width: 250px;
+    height: 270px;
+
+
+    .box-icon {
+      bottom: 309px;
+      left: 5px;
+    }
+    .box-icon-2 {
+      display: none;
+      bottom: 306px;
+      left: 222px;
+    }
+    .box-icon-favorite {
+      display: none;
+      bottom: 74px;
+      left: 187px;
+    }
+    & header {
+      & h1 {
+        bottom: 120px;
+        width: 218px;
+        margin-left: 15px;
+      }
+      & h2 {
+        top: 145px;
+        margin-left: 15px;
+      }
+    }
+    & footer {
+      height: 50px;
+      bottom: 50px;
+      & h1 {
+        left: 10px;
+        width: 100%;
+      }
+      & h2 {
+        display: none;
+        left: 47px;
+        top: 3px;
+        margin-bottom: 4px;
+      }
+      & img {
+        display:none;
+      }
+      & nav {
+        left: 10px;
+        top: 28px;
+      }
+      & ul {
+      }
+      & li {
+        & p {
+        }
+      }
+    }
+  }
+
+/****************PROMO SLIDER BOX ***********/
+
+
+ /******************* END PROMO SLIDER BOX **********************/
+
+  /* jssor slider bullet navigator skin 05 css */
+#sliderb_container {
+  margin: 0 5px 0 5px;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+.theSlides{
+  cursor: move;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 600px;
+  height: 300px;
+  overflow: hidden;
+  opacity: 1;
+
+}
+    &.loader{
+      position: absolute;
+      top: 0px;
+      left: 0px;
+    }
+  .leFilter{
+    filter: alpha(opacity=70);
+    opacity:0.7;
+    position: absolute;
+    display: block;
+    background-color: #000;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height:100%;
+  }
+
+  .loaderCSS{
+
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: 50%;
+    left: 50%;
+    margin: -162px 0 0 -150px;
+    text-align: center;
+
+
+    span
+    {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      margin: 145px 3px 0;
+      background: rgba(255,255,255,0.25);
+      border-radius: 50%;
+      transform: translateY(0);
+      -moz-transform: translateY(0);
+      -webkit-transform: translateY(0);
+
+      animation: wave 2s infinite ease-in-out;
+      -moz-animation: wave 2s infinite ease-in-out;
+      -webkit-animation: wave 2s infinite ease-in-out;
+    }
+
+    @keyframes wave
+    {
+      0%, 60%, 100%
+      {
+        background: rgba(255,255,255,0.25);
+        transform: translateY(0);
+        -moz-transform: translateY(0);
+      }
+
+      20%
+      {
+        background: rgba(255,255,255,0.75);
+        transform: translateY(13px);
+        -moz-transform: translateY(13px);
+      }
+
+      40%
+      {
+        background: rgba(255,255,255,0.75);
+        transform: translateY(-13px);
+        -moz-transform: translateY(-13px);
+      }
+
+    }
+
+    @-webkit-keyframes wave
+    {
+      0%, 60%, 100%
+      {
+        background: rgba(255,255,255,0.25);
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+      }
+
+      20%
+      {
+        background: rgba(255,255,255,0.75);
+        transform: translateY(13px);
+        -webkit-transform: translateY(13px);
+      }
+
+      40%
+      {
+        background: rgba(255,255,255,0.75);
+        transform: translateY(-13px);
+        -webkit-transform: translateY(-13px);
+      }
+    }
+
+    span:nth-child(1)
+    {
+      animation-delay: 0s;
+      -moz-animation-delay: 0s;
+      -webkit-animation-delay: 0s;
+    }
+
+    span:nth-child(2)
+    {
+      animation-delay: 0.1s;
+      -moz-animation-delay: 0.1s;
+      -webkit-animation-delay: 0.1s;
+    }
+
+    span:nth-child(3)
+    {
+      animation-delay: 0.2s;
+      -moz-animation-delay: 0.2s;
+      -webkit-animation-delay: 0.2s;
+    }
+
+    span:nth-child(4)
+    {
+      animation-delay: 0.3s;
+      -moz-animation-delay: 0.3s;
+      -webkit-animation-delay: 0.3s;
+    }
+
+    span:nth-child(5)
+    {
+      animation-delay: 0.4s;
+      -moz-animation-delay: 0.4s;
+      -webkit-animation-delay: 0.4s;
+    }
+  }
+  .jssorb05 {
+    position: relative;
+    top:5px;
+    margin: 0 auto;
+  }
+
+  .jssorb05 div, .jssorb05 div:hover, .jssorb05 .av {
+
+    margin: auto;
+    width: 16px;
+    height: 16px;
+    background: url(../images/slider/b10.png) no-repeat;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .jssorb05 div {
+    background-position: -7px -7px;
+  }
+  .jssorb05 div:hover, .jssorb05 .av:hover {
+    background-position: -37px -7px;
+  }
+  .jssorb05 .av {
+    background-position: -67px -7px;
+  }
+  .jssorb05 .dn, .jssorb05 .dn:hover {
+    background-position: -97px -7px;
+  }
+  .navDivider {
+    position: relative;
+    width: 100%;
+    height: 23px;
+    top: 277px;
+    margin-left: 0px;
+    background-color: rgba(0, 0, 0, .8);
+  }
+}
+/******************NAV*******************/
+/************ CAJA TWITTER ***************/
+#twitterBox{
+
+  width: 300px;
+  height: 94px;
+  background-color: @twitter-color;
+  margin: 5px 5px;
+  text-align: center;
+
+  .iconTwitter{
+    margin-top: 5px;
+    color:white;
+    .twitterNumber{
+      font-family: @Simple-Regular;
+      font-size: @font24;
+      font-weight: bolder;
+    }
+    p{
+      font-weight: 400;
+      font-size: @font16;
+    }
+  }
+}
+
+/***************** PM5 end.... **********/
+}

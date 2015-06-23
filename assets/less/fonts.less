@@ -1,0 +1,172 @@
+/**
+ * VICTORIA DIGITAL
+ *
+ * Copyright (c) 2015 Victoria Digital
+ *
+ * This file contains VICTORIA DIGITAL Information
+ * Use, disclosure or reproduction is prohibited.
+ *
+ * @author    Victoria Digital
+ +++++++++++++++++++++++++
+ * fonts.less
+ +++++++++++++++++++++++++
+ */
+@font-face {
+  font-family: 'SimpleRegular';
+  src: url('http://www.pmcanal5.com/fonts/simple/simple.eot') format('embedded-opentype'),
+  //url('http://www.pmcanal5.com/fonts/simple/simple-bold.woff') format('woff'),
+  url('http://www.pmcanal5.com/fonts/simple/simple.ttf') format('truetype'),
+  url('http://www.pmcanal5.com/fonts/simple/simple.svg#SimpleRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SimpleBold';
+  src: url('http://www.pmcanal5.com/fonts/simplebold/simple-bold.eot') format('embedded-opentype'),
+  url('http://www.pmcanal5.com/fonts/simplebold/simple-bold.woff') format('woff'),
+  url('http://www.pmcanal5.com/fonts/simplebold/simple-bold.ttf') format('truetype'),
+  url('http://www.pmcanal5.com/fonts/simplebold/simple-bold.svg#SimpleBoldRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face{
+  font-family: 'OswaldRegular';
+  src: url('http://www.pmcanal5.com/fonts/oswald/oswald-regular-webfont.eot') format('embedded-opentype'),
+  url('http://www.pmcanal5.com/fonts/oswald/oswald-regular-webfont.woff') format('woff'),
+  url('http://www.pmcanal5.com/fonts/oswald/oswald-regular-webfont.ttf') format('truetype'),
+  url('http://www.pmcanal5.com/fonts/oswald/oswald-regular-webfont.svg') format('svg');
+}
+@font-face{
+  font-family: 'Open Sans';
+  @import url(http://fonts.googleapis.com/css?family=Open+Sans);
+  font-style: normal;
+}
+
+/*****************************
+VAR FONTS
+*****************************/
+
+@Simple-Regular: 'SimpleRegular', 'Helvetica', 'Arial', 'Verdana';
+@Simple-Bold: 'SimpleBold', 'Helvetica', 'Arial', 'Verdana';
+@Courier-Regular:'courierregular', 'Helvetica', 'Arial', 'Verdana';
+@Oswald-Regular: 'oswaldregular', 'Helvetica', 'Arial', 'Verdana';
+@Oswald-Bold: 'oswaldbold', 'Helvetica', 'Arial', 'Verdana';
+@Oswald-Light: 'oswaldlight', 'Helvetica', 'Arial', 'Verdana';
+@lato:'Lato';
+@Open-Sans: 'Open Sans', sans-serif;
+
+.title(){
+  font-family: @Open-Sans;
+
+}
+
+.dates{
+  font-family: @Open-Sans;
+  color: @color-pm;
+  margin-left: 29px;
+  font-weight: 400;
+}
+.date{
+  .dates();
+  font-size: 30px;
+  line-height: 15px;
+}
+.month{
+  .dates();
+font-size:16px;
+}
+.year{
+  .dates();
+  font-size:13px
+}
+
+.title-small(){
+  .title();
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.title-medium(){
+  .title();
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.title-large(){
+  .title();
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.font-light(){
+  color: @white;
+  &:hover{
+
+  }
+}
+.font-pm(){
+  color: @color-pm;
+}
+
+.font-dark(){
+  color: @black;
+  &:hover{
+
+  }
+}
+
+.nav-general{
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+
+}
+
+/****************************
+H1 STYLES
+*****************************/
+h1{
+  .title-medium();
+  .font-light();
+  text-transform: uppercase;
+
+  &.small{
+    .title-small();
+  }
+
+  &.large{
+    .title-large();
+  }
+
+  &.dark{
+    .font-dark();
+  }
+}
+/****************************
+H2 STYLES
+*****************************/
+h2{
+  .title-small();
+  .font-pm();
+  text-transform: uppercase;
+}
+/****************************
+NAV
+****************************/
+li{
+  .nav-general();
+  .font-light();
+}
+
+.tlt-ad{
+    font-size: 10px;
+    font-family: "Open Sans";
+    color: rgb(153, 153, 153);
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+/*****************************
+MODAL FONT
+*****************************/
+.modal{
+  font-family: "Open Sans";
+}

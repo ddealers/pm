@@ -1,0 +1,156 @@
+/**
+ * VICTORIA DIGITAL
+ *
+ * Copyright (c) 2013 Victoria Digital
+ *
+ * This file contains VICTORIA DIGITAL Information
+ * Use, disclosure or reproduction is prohibited.
+ *
+ * @author    Victoria Digital / Benjamín García
+
+ */
+
+/*****************************
+VAR COLORS
+*****************************/
+
+@black: #000;
+@border: #e6e6ec;
+@background: @black;
+@white: #fff;
+@cyan: #00ffff;
+@color-pm: #00ff00;
+@border-button: #cccccc;
+@author-color: #999;
+@background-single: #1b1b1b;
+@bar-full: #33cc33;
+@bar-semi: #009900;
+@bar-medium: #006600;
+@bar-empty: #003300;
+@bar-gray: #999999;
+@newcolor: #ff0000;
+@bestcolor: #0069cd;
+@viewcolor: #ff2bff;
+
+/*******/
+/*Social network colors */
+/*******/
+@facebook-color: #4c65a5;
+@instagram-color: #00769e;
+@spotify-color: #00bc00;
+@twitter-color: #20c2f1;
+@vine-color: #00aa76;
+@youtube-color: #fe0024;
+@rss-color: #ff9800;
+
+
+@dark-grey: #414141;
+@secondary-blue: #00a8d9;
+@soft-grey: #9a9a9a;
+@background-promo: @background-single;
+@colortext-promo: @color-pm;
+@colortext-close: @white;
+@simple-btn: #00A8DA;
+@over-btn: #62BB46;
+@dark-gray: #333333;
+
+/*****************************
+VAR FONTS
+*****************************/
+
+@Simple-Bold: 'SimpleBold', 'Helvetica', 'Arial', 'Verdana';
+@Courier-Regular:'courierregular', 'Helvetica', 'Arial', 'Verdana';
+@Oswald-Regular: 'oswaldregular', 'Helvetica', 'Arial', 'Verdana';
+@Oswald-Bold: 'oswaldbold', 'Helvetica', 'Arial', 'Verdana';
+@Oswald-Light: 'oswaldlight', 'Helvetica', 'Arial', 'Verdana';
+
+/*****************************
+VIEWPORT SIZES
+*****************************/
+
+// Ultra small screen / phone
+// Note: Deprecated @screen-xs and @screen-phone as of v3.0.1
+@screen-us:                  320px;
+@screen-us-min:              @screen-us;
+@screen-tamagochi:           @screen-us-min;
+
+// Extra small screen / phone
+// Note: Deprecated @screen-xs and @screen-phone as of v3.0.1
+@screen-xs:                  480px;
+@screen-xs-min:              @screen-xs;
+@screen-phone:               @screen-xs-min;
+
+// Small screen / tablet
+// Note: Deprecated @screen-sm and @screen-tablet as of v3.0.1
+@screen-sm:                  768px;
+@screen-sm-min:              @screen-sm;
+@screen-tablet:              @screen-sm-min;
+
+// Medium screen / desktop
+// Note: Deprecated @screen-md and @screen-desktop as of v3.0.1
+@screen-md:                  960px;
+@screen-md-min:              @screen-md;
+@screen-desktop:             @screen-md-min;
+
+// Large screen / wide desktop
+// Note: Deprecated @screen-lg and @screen-lg-desktop as of v3.0.1
+@screen-lg:                  1200px;
+@screen-lg-min:              @screen-lg;
+@screen-lg-desktop:          @screen-lg-min;
+
+// So media queries don't overlap when required, provide a maximum
+@screen-us-max:              (@screen-xs-min - 1);
+@screen-xs-max:              (@screen-sm-min - 1);
+@screen-sm-max:              (@screen-md-min - 1);
+@screen-md-max:              (@screen-lg-min - 1);
+
+/*****************************
+LAYOUT SIZES
+*****************************/
+@content-lg:					855px;
+@content-md:					@content-lg - 240;
+@content-sm:					@content-md - 192;
+@content-xs:					100%;
+@content-us:					100%;
+
+/*******************************
+16*9
+********************************/
+
+@content-lg-16-9:					@content-lg / 16 * 9;
+@content-md-16-9:					@content-md / 16 * 9;
+@content-sm-16-9:					@content-sm / 16 * 9;
+@content-xs-16-9:					(@screen-xs - 20) / 16 * 9;
+@content-us-16-9:					(@screen-us - 20) / 16 * 9;
+
+/*******************************
+16*9 FULL WIDTH
+
+TODO convert this vars into a 
+single mixin by param
+********************************/
+
+@content-lg-16-9-full:					(@screen-lg - 20) / 16 * 9;
+@content-md-16-9-full:					(@screen-md - 20) / 16 * 9;
+@content-sm-16-9-full:					(@screen-sm - 20) / 16 * 9;
+
+/*****************************
+FONT SIZES
+*****************************/
+@font10: 10px;
+@font12: 12px;
+@font14: 14px;
+@font16: 16px;
+@font18: 18px;
+@font20: 20px;
+
+
+/*****************************
+POST HEIGHTS
+*****************************/
+@most-height: 230px;
+@promo-height: 160px;
+@highlight-height: 350px;
+@break-height: 400px;
+@post-height: 250px;
+@program-height: 275px;	

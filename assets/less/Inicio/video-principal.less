@@ -1,0 +1,109 @@
+#video-principal{
+  border: none;
+  margin-top: 30px;
+  .player{
+    width: 100%;
+    border: 1px solid @border-box;
+    iframe{
+      border: none;
+    }
+  }
+  .desc-player{
+    background: #222222;
+    margin-top: -5px;
+    height: 220px;
+    .row{
+      border: none;
+      a{
+        color: @cyan;
+        font-size: 18px;
+        line-height: 1.2;
+        text-transform: uppercase;
+        font-weight: 200;
+      }
+      .col-md-6{
+        ul{
+          list-style: none;
+          padding: 10px;
+          font-size: 20px;
+          margin-top: 12px;
+          li{
+            display: inline-block;
+            font-size: 14px;
+            margin-left: 20px;
+            &:nth-child(1){
+              margin-left: 0;
+            }
+            span{
+              padding-right: 6px;
+            }
+          }
+        }
+        &:nth-child(2){
+          a{
+            color: white;
+          }
+          ul{
+            margin-left: 194px;
+            li{
+              margin-left: 1px;
+              color: #cccccc;
+              span{
+                font-size: 22px;
+              }
+            }
+            .box{
+              width: 30px;
+              height: 30px;
+              padding: 5px;
+              &.box-face{
+                background: @facebook-color;
+                padding-left: 8px;
+              }
+              &.box-twitter{
+                background: @twitter-color;
+              }
+              &.box-google{
+                background: @youtube-color;
+              }
+              &:hover{
+                background: @gray-light;
+              }
+            }
+          }
+        }
+      }
+      &:nth-child(2){
+        color: white;
+        padding: 0 10px;
+        margin: 0;
+        h4{
+          padding: 10px 15px 5px 15px;
+          font-size: 23px;
+          font-family: @Open-Sans;
+          font-weight: 200;
+          margin-top: 0;
+        }
+        p{
+          padding: 0 15px;
+          font-size: 17px;
+          font-weight: 200;
+        }
+        .btn-verDesc{
+          border-top: 1px solid #333333;
+          width: 808px;
+          position: relative;
+          margin: 0 auto;
+          a{
+            color: @cyan;
+            text-transform: lowercase;
+            font-size: 14px;
+            padding-top: 13px;
+            position: absolute;
+            line-height: 1.2;
+          }
+        }
+      }
+    }
+  }
+}

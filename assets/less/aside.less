@@ -1,0 +1,148 @@
+.col-md-3 {
+  margin-left: 15px;
+  width: 300px;
+  h4 {
+    width: 300px;
+    &:nth-child(1) {
+      padding-top: 0;
+      margin: 0;
+    }
+    span {
+      a {
+        font-family: "Open Sans", sans-serif;
+        color: cyan;
+        font-size: 14px;
+        text-decoration: underline;
+        text-transform: capitalize;
+        display: inline-block;
+        float: right;
+        padding: 5px 0 0 0;
+        font-weight: 100;
+      }
+    }
+  }
+  .spotify {
+    width: 302px;
+    border: 1px solid @border-box;
+    height: 387px;
+  }
+  .tlt-ad {
+    padding: 15px 0;
+  }
+  .ad {
+    width: 300px;
+    height: 300px;
+    background: @ad-color;
+    border: 2px solid #959595;
+  }
+  .social-aside {
+    width: 302px;
+    ul {
+      margin: 0;
+      padding: 0;
+      li.box-social-aside {
+        display: inline-block;
+        width: 97px;
+        height: 97px;
+        color: white;
+        padding: 11px;
+        text-align: center;
+        margin-top: 3px;
+        &.box-face {
+          background: @facebook-color;
+        }
+        &.box-twitter {
+          background: @twitter-color;
+        }
+        &.box-youtube {
+          background: @youtube-color;
+        }
+        &.box-instagram {
+          background: @instagram-color;
+        }
+        &.box-spotify {
+          background: @spotify-color;
+        }
+        &.box-vine {
+          background: @vine-color;
+        }
+        a {
+          color: white;
+          text-decoration: none;
+          font-size: 13px;
+          text-transform: capitalize;
+          font-weight: lighter;
+          span {
+            font-size: 30px;
+          }
+          .number {
+            font-size: 18px;
+            font-family: @Oswald-Regular;
+          }
+        }
+        &:hover {
+          background: @gray-light;
+        }
+      }
+    }
+  }
+  .newsletter-aside {
+    width: 297px;
+    background: @color-pm;
+    margin-top: 5px;
+    .suscritores {
+      text-align: center;
+      width: 97px;
+      height: 97px;
+      padding: 9px;
+      display: inline-block;
+      span {
+        color: black;
+        font-size: 29px;
+        padding: 0;
+      }
+      .number {
+        font-size: 18px;
+        font-family: @Oswald-Regular;
+      }
+      .tlt-social {
+        color: black;
+        text-decoration: none;
+        font-size: 13px;
+        text-transform: capitalize;
+        font-weight: 200;
+      }
+    }
+    .box-newsletter {
+      display: inline-block;
+      position: absolute;
+      border: 1px solid #3ed52f;
+      padding: 0 5px;
+      input {
+        background: white;
+        border: 1px solid #00bc00;
+        color: @bar-gray;
+        width: 188px;
+        height: 32px;
+        margin: 8px 0 5px 0;
+      }
+      a.btn-newsletter {
+        background: @simple-btn;
+        display: block;
+        color: white;
+        width: 188px;
+        height: 42px;
+        top: 6px;
+        margin: 4px auto;
+        text-align: center;
+        padding: 10px 0;
+        font-size: 16px;
+        font-weight: 200;
+        &:hover {
+          background: @over-btn;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

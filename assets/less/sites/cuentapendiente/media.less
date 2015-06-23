@@ -1,0 +1,321 @@
+#PMCanal5{
+   #CuentaPendiente{
+      @media (max-width: 320px){
+         #cp-characters{
+            height: 458px !important;
+            .items-container{
+               width: 1082px;
+               .items{
+                  width: 280px !important;
+               }
+            }
+            .character{
+               min-width: 50px !important;
+               min-height: 50px !important;
+            }
+         }
+          #modal-profile .modal-dialog .modal-content .modal-body .profile-info .inf{
+            margin-top: 10px !important;
+         }
+         #modal-profile .modal-dialog .modal-content .modal-body .profile-bio{
+            bottom: 50px !important;
+         }
+      }
+      @media (max-width: @screen-xs-max){
+         #modal-profile .modal-dialog .modal-content .modal-body .profile-info .inf{
+            margin-top: 10px;
+         }
+       #modal-profile .modal-dialog .modal-content .modal-body .profile-bio{
+            bottom: 80px;
+         }
+         .pull-right{
+            &.mobile{
+             display: block;
+            }
+         }
+         #cp-characters{
+            height: 564px;
+            .items-container{
+               width: 1082px;
+               .items{
+                  width: 310px;
+               }
+            }
+            .character{
+               width: 44%;
+               min-height: 143px;
+               min-width: 143px;
+            }
+         }
+         #cp-data{
+            #cp-data-title{
+               width: 100%;
+               max-height: 73px;
+               text-align: center;
+               img{
+                  height: 100%;
+                  width: auto;
+               }
+            }
+            .data-program{
+               padding: 10px 5px;
+            }
+         }
+         #CP-header{
+            height: auto !important;
+            .advertising{
+               float: none;
+               margin: 10px auto;
+            }
+            .branding{
+               float: none;
+               margin: 0 auto;
+            }
+            .menu-bk{
+               margin: 0 auto;
+               padding-top: 0;
+            }
+            #menu{
+               width: 100%;
+               height: auto;
+               margin: 0 auto;
+            }
+         }
+         .cp-comments{
+            width: 100%;
+            max-width: 618px !important;
+         }
+		 
+ 		#back-cp-container{
+			background-color: #000;
+            border: 1px solid @black;
+			.stage{
+				.content{
+					width: 100%;
+				}	
+			}	
+			
+         }
+          .stage{
+            .content{
+               width: 100%;
+            }
+         }	 
+         #modal-profile{
+            .modal-dialog{
+               width: 94%; 
+               min-width: inherit;  
+               .modal-content{
+                  .modal-body{
+                     height: auto;
+                     min-height: 800px;
+                     .death-title{
+                        display: block;
+                        position: relative;
+                        text-align: center;
+                        width: 100%;
+                        right: inherit;
+                     }
+                     .profile-info{
+                        position: relative;
+                        float: none;
+                        margin-top: 0;
+                        margin-left: 0;
+                     }
+                     .profile-bio{
+                        float: none;
+                        margin-left: 0;
+                        #bio{
+                           float: none;
+                           width: 100%;
+                        }
+                     }
+                     .profile-image{
+                        height: 300px;
+                        float: none;
+                        margin:0 auto;
+                     }
+                  }
+               }
+            }
+         }
+      }
+       @media (min-width: 550px) and (max-width: 767px){
+         #cp-characters{
+             height: 426px;
+            .items-container{
+               width: 2206px;
+               .items{
+                  width: 730px;
+               }
+            }
+            .character{
+               width: 31%;
+               min-height: 165px;
+               min-width: 165px;
+            }
+         } 
+       }
+      @media (min-width: 768px){}
+      @media (min-width: 768px) and (max-width: 830px) {
+         #back-cp-container{
+            .player-effect{
+               background-position: center -412px;
+            }
+         }
+         #modal-profile{
+            .modal-dialog{
+               
+               .modal-content{
+                  .modal-body{
+                     
+                     .death-title{
+                        
+                     }
+                     .profile-info{
+                        
+                     }
+                     .profile-bio{
+                        bottom: 167px !important;
+                        #bio{
+                          
+                        }
+                     }
+                     .profile-image{
+                        
+                     }
+                  }
+               }
+            }
+         }
+      }
+      @media (min-width: 831px) and (max-width: 959px) {
+         #back-cp-container{
+            .player-effect{
+               background-position: center -384px;
+            }
+         }
+      } 
+      @media (min-width: @screen-xs-min) and (max-width: @screen-xs-max) {}
+      @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+         #CP-header{
+            height: auto !important;
+            .advertising{
+               float: none;
+               margin: 10px auto;
+            }
+            .branding{
+               float: none;
+               margin: 0 auto;
+            }
+            .menu-bk{
+               margin: 0 auto;
+               padding-top: 0;
+            }
+            #menu{
+               width: 100%;
+               height: auto;
+               margin: 0 auto;
+            }
+         }
+         .cp-comments{
+            width: 100%;
+            max-width: 545px!important;
+         }
+         .sidebar{
+            &.second{
+               width: 100%;
+            }
+         }
+		 
+		.data-program{
+			display: none;	
+		}
+ 		#back-cp-container{
+			background-color: #000;
+            border: 1px solid @black;
+			.stage{
+				.content{
+					width: 420px;
+				}	
+			}	
+			
+         }
+          .stage{
+            .content{
+               width: 420px;
+            }
+         }		 
+         #modal-profile{
+            .modal-dialog{
+               width: 94%; 
+               min-width: inherit;  
+               .modal-content{
+                  .modal-body{
+                     height: auto;
+                     min-height: 560px;
+                     .profile-bio{
+                        bottom: 180px;
+                        #bio{
+                           width: 455px;
+                           height: 215px;
+                        }
+                     }
+                     .profile-info{
+                        margin-left: 10px;
+
+                     }
+                     .profile-image{
+                        height: 300px;
+                        float: left;
+                     }
+                  }
+               }
+            }
+         }
+      }
+      @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+         #CP-header{
+            height: auto;
+            .advertising{
+               float: none;
+               margin: 10px auto;
+            }
+            .branding{
+               margin-top: 25px;
+               float: none;
+               margin:0 auto;
+            }
+            .menu-bk{
+               margin: 0 auto;
+            }   
+         }
+          .stage{
+            .content{
+                  width: 580px;
+               }
+         }
+         #back-cp-container{
+         border: 1px solid @black;
+			background-color: #000;
+			.stage{
+				.content{
+					width: 580px;
+				}	
+			}	
+			
+         }
+         .cp-comments{
+            width: 100%;
+            max-width: 545px!important;
+         }
+         .sidebar{
+            &.second{
+               float:none;
+               width: 100%;
+            }
+         }
+      }
+      @media (min-width: @screen-lg-min) {} 
+   } 
+} 

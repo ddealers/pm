@@ -1,0 +1,476 @@
+#PMCanal5{
+	background: @cyan url('http://a9.g.akamai.net/f/9/250733/1m/pmcanal5.download.akamai.com/250733/images/sites/heroesdelnorte/backgrounds/background-banda.png') !important;
+	background-size: cover;
+	.green-titles{
+	background: @pinkmenu !important;
+	color:@white !important; 
+}
+	#single-post-pm{
+		.single-content{
+			background: transparent;
+		}
+		.options li:first-child{
+			color:@white ;
+		}
+	}
+	.breadcrumb{
+		background:transparent;
+		a{
+			color:@white;
+		}
+		span{
+			color:@breadspan;
+		}
+	}
+	.commentsbox{
+		background: @cyan;
+	}
+	.tabs{
+		padding:0; 
+		width: 100%;
+		background: @pinkmenu;
+		.tab{
+			width: 200px;
+			background: @pinkmenu;
+			text-transform: uppercase;
+			color: @white;
+			font-size: @font18;
+			&.active{
+				background: @cyan;
+				&:hover{
+					cursor:inherit;
+					background: @cyan;
+				}
+			}
+			&:hover{
+				background: @rrred;
+
+			}
+		}
+	}
+	.tab-content{
+		padding: 0;
+		margin:0;
+	}
+	.post{
+		.article-overlay{
+			background: rgba(248,48,114,0.70) !important;
+		}
+	}
+	.general-button{
+		background: @pinkmenu;
+		color: @white;
+		&:hover{
+			background:@rrred;
+			text-decoration: none;
+		}
+	}
+	.single-comments {
+		.comments{
+			h3.comments-title{
+				color: @white;
+			}
+		}
+	}
+	.white-widget{
+		.widget-head{
+			background: @cyan;
+		}
+	}
+	.widget-postvideo{
+		.black-titles{
+			background: @pinkmenu;
+			.postvideo-share{
+				.options{
+					li{
+						color:@white;
+					}
+				}
+			}
+			.postvideo-comments{
+				a{
+					color:@white;
+				}
+			}
+		}
+	} 
+}
+#heroresdelnorte{
+	width: 100%;
+	height: 100%;
+	background:#000;
+	position: relative;
+	padding-top:0;
+
+	/***************
+	GENERALS
+	***************/
+
+	.icon-TwitterNet{
+		background-position: -239px -125px;
+		&:hover {
+			background-position: -83px -125px;
+		}
+	}
+	.icon-FacebookNet{
+		background-position: -264px -125px;
+		&:hover{
+			background-position: -108px -125px;
+		}
+	}
+	.icon-GoogleNet{
+		background-position: -289px -124px;
+		&:hover{
+			background-position: -133px -124px;
+		}
+	}
+
+	.hn-containner{
+		width: 100%;
+		min-height: 600px;
+		border-bottom: 1px solid #ccc;
+		margin: 0 auto;
+		position: relative;
+		overflow: hidden;
+		padding-top: 50px;
+	}
+	.right-column{
+		position: absolute;
+		top:850px;
+		width: 300px;
+		min-height: 500px;
+		right:50%;
+		left: 50%;
+		margin-left: 150px;
+		z-index: 1002;
+		.section-tittle{
+			color: #f83072 !important;
+		}
+		.green-line{
+			background: #f83072 !important;
+		}
+	}
+	.left-column{
+		position: relative;
+		left: 50%;
+		margin-left: -500px;
+		width: 610px;
+		float: left;
+		position: relative;
+		margin-bottom: 20px;
+		.hn-content{
+			min-height: 100px;
+			background: #fff;
+			overflow: hidden;
+		}
+	}
+	.melatebar{
+		position:absolute;
+		bottom:0;
+		left:0;
+		width: 100%;
+		display: none;
+	}
+	.sharing {
+		min-height: 40px;
+		background: @pinkmenu;
+		margin-top: 20px;
+		color:@color-pm;
+		display: block;
+		width: 100%;
+		position: absolute;
+		top:0;
+		left: 0;
+		margin: 0 auto;
+		z-index: 1;
+		&.title{
+			line-height: 40px;
+			color: @white;
+			padding: 0 10px;
+			position: relative;
+			text-transform: uppercase;
+			font-size: @font18;
+		}
+		.options {
+			overflow: hidden;
+			margin:10px 10px 0 0;
+			padding: 0;
+			float: right;
+			li{
+				float: left;
+				list-style: none;
+				width: 20px;
+				height: 20px;
+				margin: 0 10px;
+				color: @white;
+				a{
+					width: 100%;
+					height: 20px;
+					display: block;
+				}
+			}
+			li:first-child{
+				width: 65px;
+				margin: 1px 5px 0 0;
+				font-weight: bold;
+				font-size: 12px;
+			}
+			li:hover {
+				cursor: pointer;
+			}
+		}
+	}
+	.tab-content,.col-md-12{
+		padding: 0;
+		margin: 0;
+	}
+	.posts-container{
+		padding: 0;
+		margin: 0;
+		.post{
+			.article-overlay{
+				background: rgba(248,48,114,0.70);
+			}
+			.article-share{
+				width: 190px;
+				left:50%;
+				margin-left: -90px;
+				.options{
+					padding: 0;
+					li{
+						color:@white;
+					}
+				}
+			}
+		}
+	}
+	.general-button{
+		background: @pinkmenu;
+		color: @white;
+		&:hover{
+			background:@rrred;
+			text-decoration: none;
+		}
+	}
+
+	/***************
+	LAYOUT
+	***************/
+
+	#navigation{
+		position: absolute;
+		width: 100%;
+		height:379px;
+		top:0;
+		z-index: 2001;
+		h1.brand{
+			width: 460px;
+			height: 340px;
+			margin: 0 auto;
+			background: url('http://a9.g.akamai.net/f/9/250733/1m/pmcanal5.download.akamai.com/250733/images/sites/heroesdelnorte/main/logo_heroesdelnorte.png') no-repeat center center;
+		}
+		.controllers-container{
+			overflow: hidden;
+			width: 100%;
+			background:@pinkmenu;
+			border-top: 1px solid @cyan;
+			border-bottom: 1px solid @cyan;
+			top:-100px;
+			.site-controllers{
+				width: 500px;
+				margin: 0 auto;
+				overflow: hidden;
+				padding:0;
+				li{
+					list-style: none;
+					margin: 0;
+					float: left;
+					width: 25%;
+					height: 45px;
+					line-height: 45px;
+					color:#fff;
+					text-align: center;
+					border-right: 1px solid @cyan;
+					text-transform: uppercase;
+					&:last-child{
+						border-right:none;
+					}
+					.transition-color;
+					&:hover{
+						cursor:pointer;
+						background:@background-landing;
+						.transition-color;
+					}
+					&.active{
+						cursor:pointer;
+						background:@background-landing;
+					}
+				}
+			}
+			&.fixed-menu{
+				position: fixed;
+				width: 100%;
+				top:40px;
+				z-index: 1;
+				left: 0;
+			}
+		} 
+	}
+	#landing{
+		background: @background-landing url('http://a9.g.akamai.net/f/9/250733/1m/pmcanal5.download.akamai.com/250733/images/sites/heroesdelnorte/backgrounds/background-landing.png') no-repeat center center;
+		background-size: cover;
+		.hn-content{
+			text-align: center;
+			margin: 320px auto 0 auto;
+			width: 100%;
+			max-width: 1200px;
+			#landing-image{
+				height: 100%;
+				width: auto;
+			}
+		}
+	}
+	#palabanda{
+		background: @cyan url('http://a9.g.akamai.net/f/9/250733/1m/pmcanal5.download.akamai.com/250733/images/sites/heroesdelnorte/backgrounds/background-banda.png');
+	}
+	#galeria{
+		background: @cyan url('http://a9.g.akamai.net/f/9/250733/1m/pmcanal5.download.akamai.com/250733/images/sites/heroesdelnorte/backgrounds/background-galeria.png');
+		#hn-gallery{
+			height: 385px;
+			position: relative;
+			.swiper-container, .swiper-slide, .swiper-wrapper{
+				height: 385px;
+			}
+		}
+		.gallery-decoration{
+			background: url('http://a9.g.akamai.net/f/9/250733/1m/pmcanal5.download.akamai.com/250733/images/sites/heroesdelnorte/main/gallery-decoration.png') center center;
+			width: 100%;
+			height: 28px;
+			clear: both;
+			margin:20px auto;
+			background-size: 100% auto;
+		}
+		.hn-back-slide,
+		.hn-next-slide{
+			position: absolute;
+			height: 100%;
+			width: 40px;
+			background: rgba(248,48,114,0.50);
+			z-index: 100;	
+			color:@white;
+			text-align: center;
+			font-size: @slider-arrows;
+			&:hover{
+				background: rgba(248,48,114,1);
+				text-decoration: none;
+			}
+			span{
+				position: relative;
+				top:50%;
+				margin-top: -18px;
+				height: 36px;
+				display: block;
+			}
+		}
+		.hn-back-slide{
+			top:0;
+			left: 0;
+		}
+		.hn-next-slide{
+			top:0;
+			right: 0;
+		}
+		.general-button{
+			width: 180px;
+			float: right;
+			margin-top: 20px;
+		}
+
+	}
+	#serie{
+		background: @rrred url('http://a9.g.akamai.net/f/9/250733/1m/pmcanal5.download.akamai.com/250733/images/sites/heroesdelnorte/backgrounds/background-serie.png');
+		.text-box{
+			&.padding{
+				padding: 20px;
+			}
+			.box-title{
+				color:@pinkmenu;
+				margin: 20px 0;	
+				text-transform: uppercase;
+				font-size: @font18;
+			}
+			.image{
+				float:left;
+				width: 240px;
+				background: #ccc;
+				height: 245px;
+				text-align: center;
+				overflow: hidden;
+				border-right: 2px solid @cyan;
+				img{
+					height: 100%;
+				}
+			}
+			.text{
+				float:left;
+				width: 360px;
+				margin-left: 10px;
+				height:245px;
+				overflow-x: scroll;
+				.apodo{
+					font-size: @font18;
+					margin-top: 10px;
+				}
+				.name{
+					color: @pinkmenu;
+					font-size: @font18;
+					margin-bottom: 30px;
+				}
+				.description{
+					color:@black;
+					font-size: @font12;	
+					line-height: 16px;
+				}
+			}
+			p{
+				color:@black;
+				font-size: @font18;
+				padding: 0 10px;
+			}
+		}
+		.character-list{
+			background: transparent;
+			.col-md-12{
+				padding: 0;
+				margin: 0;
+			}
+			.character{
+				max-width: 118px;
+				width: 20%;
+				float: left;
+				margin-right: 5px;
+				.article-title{
+					margin-top: 60px;
+				}
+				.article-share{
+					width: 90px;
+					margin-left: -45px;
+					.options{
+						li{
+							margin: 0 5px;
+						}
+						li:first-child{
+							display:none;
+						}
+					}
+				}
+				&.character-active{
+					border:2px solid @cyan;
+				}
+				&.last{
+					margin-right: 0;
+				}
+			}
+		}
+	}	
+}
