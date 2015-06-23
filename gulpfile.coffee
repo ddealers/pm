@@ -23,7 +23,10 @@ gulp.task 'compile:less', ()->
 	.pipe gulp.dest './public/css'
 
 gulp.task 'compile:js', ()->
-	gulp.src ['./assets/js/**/module.js', './assets/js/**/*.js']
+	gulp.src [
+		'./assets/js/**/module.js'
+		'./assets/js/**/*.js'
+	]
 	.pipe sourcemaps.init()
 	.pipe concat 'app.min.js'
 	#.pipe ngAnnotate()
@@ -32,9 +35,18 @@ gulp.task 'compile:js', ()->
 	.pipe gulp.dest './public/js'
 
 gulp.task 'compile:bower:js', ()->
-	gulp.src bower
-		paths: 
-			bowerDirectory: './assets/vendor'
+	#gulp.src bower
+	#	paths: 
+	#		bowerDirectory: './assets/vendor'
+	gulp.src [
+		'./assets/vendor/jquery/dist/jquery.js'
+		'./assets/vendor/moment/src/moment.js'
+		'./assets/vendor/angular/angular.js'
+		'./assets/vendor/angular-animate/angular-animate.js'
+		'./assets/vendor/angular-bootstrap/ui-bootstrap.js'
+		'./assets/vendor/angular-bootstrap/ui-bootstrap-tpls.js'
+		'./assets/vendor/angular-route/angular-route.js'
+	]
 	.pipe filter '**/*.js'
 	.pipe concat 'vendor.min.js'
 	#.pipe ngAnnotate()
