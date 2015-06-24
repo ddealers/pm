@@ -5,10 +5,6 @@
   "authors": [
     "vampaynani <vampay@digitaldealers.mx>"
   ],
-  "main": "main.js",
-  "moduleType": [
-    "node"
-  ],
   "license": "MIT",
   "ignore": [
     "**/.*",
@@ -18,12 +14,12 @@
     "tests"
   ],
   "dependencies": {
-    "angularjs": "~1.4.1",
+    "angular": "~1.4.1",
     "jquery": "~2.1.4",
-    "bootstrap": "~3.3.5",
     "font-awesome": "~4.3.0",
     "moment": "~2.10.3",
     "angular-route": "~1.4.1",
-    "angular-animate": "~1.4.1"
+    "angular-animate": "~1.4.1",
+    "angular-bootstrap": "~0.13.0"
   }
 }
