@@ -54,6 +54,7 @@ class PostController extends Controller
             $this->request->get("endDate"),
             $this->request->get("date"),
             $this->request->get("program"),
+            $this->request->get("tags"),
             $this->request->get("order"),
             $this->request->get("orderDir"),
             $this->request->get("maxResults")

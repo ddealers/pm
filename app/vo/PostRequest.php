@@ -27,8 +27,10 @@ class PostRequest {
 
     protected $maxResults;
 
+    protected $tags;
 
-    function __construct($typePost, $postType, $startDate, $endDate, $date, $program, $order,
+
+    function __construct($typePost, $postType, $startDate, $endDate, $date, $program,$tags, $order,
                          $orderDir, $maxResults)
     {
         $this->typePost = $typePost;
@@ -37,6 +39,7 @@ class PostRequest {
         $this->endDate = $endDate;
         $this->date = $date;
         $this->program = $program;
+        $this->tags = $tags;
         $this->order = $order;
         $this->orderDir = $orderDir;
         $this->maxResults = $maxResults;
@@ -187,6 +190,22 @@ class PostRequest {
     public function setMaxResults($maxResults)
     {
         $this->maxResults = $maxResults;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getTags()
+    {
+        return $this->tags;
+    }
+
+    /**
+     * @param mixed $tags
+     */
+    public function setTags($tags)
+    {
+        $this->tags = $tags;
     }
 
 
