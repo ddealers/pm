@@ -188,6 +188,7 @@ class PostDAO implements IPostDAO
         $parameters = $this->applyDateRangeFilter($postRequest, $query, $parameters);
         $parameters = $this->applyDateFilter($postRequest, $query, $parameters);
         $parameters = $this->applyProgramFilter($postRequest, $query, $parameters);
+        $parameters = $this->applyTagsFilter($postRequest, $query, $parameters);
         return $parameters;
     }
 
@@ -198,5 +199,21 @@ class PostDAO implements IPostDAO
            "conditions" => "id = ?1",
            "bind"       => array(1 => $id)
        ));
+    }
+
+    /**
+     * @param PostRequest $postRequest
+     * @param $query
+     * @param $parameters
+     * @return mixed
+     */
+    private function applyTagsFilter(PostRequest $postRequest, $query, $parameters)
+    {
+        if ($postRequest->getTags()) {
+            $query->andWhere("tags = :tags:");
+            $parameters["tags"] = $postRequest->getTags();
+            return $parameters;
+        }
+        return $parameters;
     }
 }
