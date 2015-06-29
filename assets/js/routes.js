@@ -1,6 +1,11 @@
 angular.module('PM5')
 .config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider){
 	$routeProvider
+	.when('/', {
+		templateUrl: '/templates/layout/home.html',
+		controller: 'HomeController',
+		controllerAs: 'home'
+	})
 	.when('/:slug', {
 		templateUrl: '/templates/layout/category.html',
 		controller: 'CategoryController',

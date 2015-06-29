@@ -12,17 +12,22 @@ return new \Phalcon\Config(array(
         'charset'     => 'utf8',
     ),
     'application' => array(
-        'controllersDir' => APP_PATH . '/app/controllers/',
-        'serviceDir' => APP_PATH .  '/app/services/',
-        'daoDir' => APP_PATH .  '/app/dao/',
-        'voDir' => APP_PATH . '/app/vo/',
-        'vendorDir' => APP_PATH . '/vendor/',
-        'modelsDir'      => APP_PATH . '/app/models/',
-        'migrationsDir'  => APP_PATH . '/app/migrations/',
-        'viewsDir'       => APP_PATH . '/app/views/',
-        'pluginsDir'     => APP_PATH . '/app/plugins/',
-        'libraryDir'     => APP_PATH . '/app/library/',
-        'cacheDir'       => APP_PATH . '/app/cache/',
-        'baseUri'        => '/pm/',
+        'baseUri'       => '/pm/',
+        'cacheDir'      => APP_PATH . '/app/cache/',
+        'controllersDir'=> APP_PATH . '/app/controllers/',
+        'daoDir'        => APP_PATH .  '/app/dao/',
+        'libraryDir'    => APP_PATH . '/app/library/',
+        'migrationsDir' => APP_PATH . '/app/migrations/',
+        'modelsDir'     => APP_PATH . '/app/models/',
+        'pluginsDir'    => APP_PATH . '/app/plugins/',
+        'serviceDir'    => APP_PATH .  '/app/services/',
+        'validatorDir'  => APP_PATH . '/app/validators/',
+        'viewsDir'      => APP_PATH . '/app/views/',
+        'voDir'         => APP_PATH . '/app/vo/',
+        'vendorDir'     => APP_PATH . '/vendor/',
+        
+        
+        
+        
     )
 ));

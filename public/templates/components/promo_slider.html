@@ -1,47 +1,10 @@
 
 <!--script type="text/javascript" src="js/lib/jssor.slider.mini.js"></script>
 <script type="text/javascript" src="js/lib/loader300.js"></script-->
-<!-- Jssor Slider Begin -->
-<!-- To move inline styles to css file/block, please specify a class name for each element. -->
-<div id="sliderb_container">
-
-    <!-- Loading Screen -->
-    <div u="loading" class="loader" >
-        <div class="leFilter"></div>
-        <div class="loaderCSS">
-            <span></span><!--
-         --><span></span><!--
-         --><span></span><!--
-         --><span></span><!--
-         --><span></span>
-        </div>
-    </div>
-    <!-- Slides Container -->
-    <div class="theSlides" u="slides" style="">
-        <div>
-            <img u=image src="/images/slider/01.jpg" />
-        </div>
-        <div>
-            <img u=image src="/images/slider/02.jpg" />
-        </div>
-        <div>
-            <img u=image src="/images/slider/03.jpg" />
-        </div>
-        <div>
-            <img u=image src="/images/slider/04.jpg" />
-        </div>
-        <div>
-            <img u=image src="/images/slider/05.jpg" />
-        </div>
-
-    </div>
-    <div class="navDivider">
-            <!-- bullet navigator container -->
-        <div u="navigator" class="jssorb05" style="bottom: 16px; right: 6px;">
-            <!-- bullet navigator item prototype -->
-            <div u="prototype"></div>
-        </div>
-    </div>
-    <!--#endregion Bullet Navigator Skin End -->
+<div id="sliderb_container" ng-controller="PromoSliderController as carousel">
+    <carousel interval="carousel.interval">
+        <slide ng-repeat="slide in carousel.slides" active="slide.active">
+            <img ng-src="{{slide.image}}" style="margin:auto;">
+        </slide>
+    </carousel>
 </div>
-<!-- Jssor Slider End -->

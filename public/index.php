@@ -33,6 +33,7 @@ try {
 
     $app->setDI($di);
 
+    $app->get("/", array($di->get("siteController"), "home"));
     $app->get("/api/posts", array($di->get("postController"), "get"));
     $app->get("/api/posts/{id}", array($di->get("postController"), "findById"));
     $app->post("/api/users", array($di->get("userController"), "register"));

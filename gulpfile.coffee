@@ -2,6 +2,7 @@ path = require 'path'
 gulp = require 'gulp'
 less = require 'gulp-less'
 bower = require 'main-bower-files'
+livereload = require 'gulp-livereload'
 mincss = require 'gulp-minify-css'
 uglify = require 'gulp-uglify'
 concat = require 'gulp-concat'
@@ -21,7 +22,7 @@ gulp.task 'compile:less', ()->
 	)
 	.pipe rename 'generals.min.css'
 	.pipe gulp.dest './public/css'
-
+	
 gulp.task 'compile:js', ()->
 	gulp.src [
 		'./assets/js/**/module.js'
@@ -33,15 +34,15 @@ gulp.task 'compile:js', ()->
 	#.pipe uglify()
 	.pipe sourcemaps.write()
 	.pipe gulp.dest './public/js'
-
+	
 gulp.task 'compile:bower:js', ()->
 	#gulp.src bower
 	#	paths: 
 	#		bowerDirectory: './assets/vendor'
 	gulp.src [
 		'./assets/vendor/jquery/dist/jquery.js'
-		'./assets/vendor/moment/src/moment.js'
 		'./assets/vendor/angular/angular.js'
+		'./assets/vendor/angular-resource/angular-resource.js'
 		'./assets/vendor/angular-animate/angular-animate.js'
 		'./assets/vendor/angular-bootstrap/ui-bootstrap.js'
 		'./assets/vendor/angular-bootstrap/ui-bootstrap-tpls.js'
@@ -92,6 +93,18 @@ gulp.task 'compile:bower:fonts', ()->
 			bowerDirectory: './assets/vendor'
 	.pipe filter '**/*.woff2'
 	.pipe gulp.dest './public/fonts'
+
+gulp.task 'watch', ()->
+	livereload {start: true}
 	
+	gulp.watch './assets/less/**/*.less', ['compile:less']
+	gulp.watch './assets/js/**/*.js', ['compile:js']
+	
+	gulp.watch 'public/**/*.+(css|js|html|gif|ico|jpg|jpeg|png)', (event)->
+    	filePath = event.path.replace(/\\/g, '/').replace(new RegExp('^(.*/)?public(/(.+))$'), '$2')
+    	#livereload.changed filePath
+    	livereload.reload()
+
 gulp.task 'compile:bower', ['compile:bower:css', 'compile:bower:js', 'compile:bower:fonts']
 gulp.task 'compile', ['compile:bower','compile:less','compile:js']
+gulp.task 'default', ['compile','watch']

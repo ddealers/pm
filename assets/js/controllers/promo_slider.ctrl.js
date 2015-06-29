@@ -8,7 +8,4 @@ angular.module('PM5')
 	{image: '/images/slider/04.jpg'},
 	{image: '/images/slider/05.jpg'}
 	];
-	$scope.next = function(){
-		console.log('next');
-	}
 }]);

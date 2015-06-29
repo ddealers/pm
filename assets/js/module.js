@@ -1,1 +1,1 @@
-var app = angular.module('PM5', ['ngRoute', 'ngAnimate','ui.bootstrap','ui.bootstrap.tpls']);
+var app = angular.module('PM5', ['ngRoute', 'ngAnimate', 'ngResource', 'ui.bootstrap']);
