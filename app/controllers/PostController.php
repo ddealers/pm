@@ -95,7 +95,7 @@ class PostController extends Controller
             if(is_array($posts)){
                 $response->setJsonContent($posts);
             }
-            $response->setStatusCode(404);
+            $response->setStatusCode(404, "Not Found");
         } else {
             $hateoas = HateoasBuilder::create()->build();
             $postVos = $this->postResultSetTransformerService->transform($posts);
