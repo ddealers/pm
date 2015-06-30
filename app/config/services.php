@@ -16,14 +16,15 @@ use Phalcon\Mvc\View;
 use Phalcon\Mvc\View\Engine\Volt as VoltEngine;
 use Phalcon\Session\Adapter\Files as SessionAdapter;
 use Pm\Controller\PostController;
+use Pm\Controller\SiteController;
 use Pm\Controller\UserController;
-use Pm\Controllers\AuthenticationController;
+use Pm\Controller\AuthenticationController;
 use Pm\DAO\PostDAO;
 use Pm\DAO\UserDAO;
 use Pm\Services\ErrorMessageBuilder;
 use Pm\Services\PostResultSetTransformerService;
 use Pm\Services\UserTransformerService;
-use Pm\Validators\UserRegistrationValidator;
+use Pm\Validator\UserRegistrationValidator;
 
 /**
  * The FactoryDefault Dependency Injector automatically register the right services providing a full stack framework
@@ -73,6 +74,11 @@ $di->set("userController", function() use($di){
     $userController->setErrorMessageBuilder($di->get("errorMessageBuilder"));
     $userController->setUserDAO($di->get("userDAO"));
     return $userController;
+});
+
+$di->set("siteController", function() use($di){
+    $siteController = new SiteController();
+    return $siteController;
 });
 
 $di->set("authenticationController", function() use($di){

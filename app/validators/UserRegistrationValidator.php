@@ -6,7 +6,7 @@
  * Time: 05:32 PM
  */
 
-namespace Pm\Validators;
+namespace Pm\Validator;
 
 
 use Phalcon\Validation;

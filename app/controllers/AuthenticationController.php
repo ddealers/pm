@@ -6,7 +6,7 @@
  * Time: 11:01 PM
  */
 
-namespace Pm\Controllers;
+namespace Pm\Controller;
 
 
 use Phalcon\Http\Response;

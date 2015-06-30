@@ -1,11 +1,10 @@
 angular.module('PM5')
-.controller('LoginBarController', ['$modal', function($scope, $modal){
-	console.log($modal);
+.controller('LoginBarController', ['$scope', '$modal', function($scope, $modal){
 	this.open = function(){
 		var modalInstance = $modal.open({
-			//templateUrl: './templates/modals/box.html',
-			//controller: 'ModalBaseController',
-			//controllerAs: 'modal'
+			templateUrl: './templates/modals/box.html',
+			controller: 'ModalInstanceController',
+			controllerAs: 'modal'
 		})
 	}
 }]);

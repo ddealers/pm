@@ -7,6 +7,7 @@ error_reporting(E_ALL);
 
 define('APP_PATH', realpath('..'));
 
+$app = new Micro();
 
 try {
 
@@ -30,18 +31,25 @@ try {
      */
     include APP_PATH . "/app/config/services.php";
 
-    /**
-     * Handle the request
-     */
-    $app = new Micro($di);
+    $app->setDI($di);
 
-    $app->get("/api/posts", array($di->get("postController"),"get"));
-    $app->get("/api/posts/{id}", array($di->get("postController"),"findById"));
-    $app->post("/api/users", array($di->get("userController"),"register"));
-    $app->post("/api/auth", array($di->get("authenticationController"),"login"));
+    $app->get("/", array($di->get("siteController"), "home"));
+    $app->get("/api/posts", array($di->get("postController"), "get"));
+    $app->get("/api/posts/{id}", array($di->get("postController"), "findById"));
+    $app->post("/api/users", array($di->get("userController"), "register"));
+    $app->post("/api/auth", array($di->get("authenticationController"), "login"));
+
+    $app->notFound(function () {
+        $response = new \Phalcon\Http\Response();
+        $response->setStatusCode(404, 'Not Found')->sendHeaders();
+        $response->setJsonContent(["message"=>'Service doesn\'t exist.']);
+        $response->send();
+    });
 
     $app->handle();
 
 } catch (\Exception $e) {
-    echo $e->getMessage();
+    $app->response->setStatusCode(500, "Server Error");
+    $app->response->setJsonContent(["message" => $e->getMessage()]);
+    $app->response->send();
 }
